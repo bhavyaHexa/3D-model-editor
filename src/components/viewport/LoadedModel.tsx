@@ -13,19 +13,17 @@ export function LoadedModel({
 
   useEffect(() => {
     if (scene) {
-      const clonedScene = scene.clone(true);
-      (modelRef as React.MutableRefObject<typeof clonedScene>).current =
-        clonedScene;
-      onModelLoaded(clonedScene);
+      (modelRef as React.MutableRefObject<typeof scene>).current = scene;
+      onModelLoaded(scene);
       // Dispatch custom event to notify camera controller
       window.dispatchEvent(new CustomEvent("model-loaded"));
     }
-  }, [scene, url, onModelLoaded, modelRef]);
+  }, [scene, onModelLoaded, modelRef]);
 
   useEffect(() => {
-    if (modelRef.current) {
+    if (scene) {
       // First, remove any existing outlines
-      modelRef.current.traverse((child) => {
+      scene.traverse((child) => {
         const outline = child.children.find((c) => c.userData.isOutline);
         if (outline) {
           child.remove(outline);
@@ -42,7 +40,7 @@ export function LoadedModel({
 
 
       if (selectedMeshUuid) {
-        modelRef.current.traverse((child) => {
+        scene.traverse((child) => {
           if (child.uuid === selectedMeshUuid) {
 
             if ((child as THREE.Mesh).isMesh) {
@@ -67,13 +65,11 @@ export function LoadedModel({
         });
       }
     }
-  }, [selectedMeshUuid, modelRef]);
-
-  if (!modelRef.current) return null;
+  }, [selectedMeshUuid, scene]);
 
   return (
     <>
-      <primitive object={modelRef.current} />
+      <primitive object={scene} />
     </>
   );
 }

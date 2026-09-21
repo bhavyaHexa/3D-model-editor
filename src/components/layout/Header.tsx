@@ -1,8 +1,11 @@
-import type { HeaderProps } from "../../types/types";
+import { observer } from "mobx-react-lite";
+import { useMainContext } from "../../context/MainContext";
 
-export function Header({
-  hasModel,
-}: HeaderProps) {
+export const Header = observer(() => {
+  const stateManager = useMainContext();
+  const { sideBarManager } = stateManager.designManager;
+  const hasModel = !!sideBarManager.selectedModel;
+
   return (
     <header className="h-14 bg-gray-200 border-b border-gray-300 px-4 flex items-center justify-between z-10">
       <div className="flex items-center gap-2">
@@ -15,4 +18,4 @@ export function Header({
       )}
     </header>
   );
-}
+});

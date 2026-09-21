@@ -1,9 +1,11 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import { useEffect } from "react";
-import type { ViewportCanvasProps } from "../../types/types";
+import { Suspense, useEffect, useRef } from "react";
+import { observer } from "mobx-react-lite";
 import { LoadedModel } from "./LoadedModel";
+import { Loader } from "./Loader";
+import { useMainContext } from "../../context/MainContext";
 
 function CameraFitController({
   modelRef,
@@ -77,12 +79,17 @@ function CameraFitController({
   return null;
 }
 
-export function ViewportCanvas({
-  modelUrl,
-  onModelLoaded,
-  modelRef,
-  selectedMeshUuid,
-}: ViewportCanvasProps) {
+export const ViewportCanvas = observer(() => {
+  const stateManager = useMainContext();
+  const { modelLoadManager } = stateManager.design3DManager;
+  const { sideBarManager } = stateManager.designManager;
+  
+  const modelRef = useRef<THREE.Group | null>(null);
+
+  const modelUrl = sideBarManager.selectedModel?.url;
+  const selectedMeshUuid = modelLoadManager.selectedMeshUuid;
+  const onModelLoaded = modelLoadManager.handleModelLoaded;
+
   return (
     <div className="flex-1 h-full bg-white relative">
       <Canvas camera={{ position: [5, 5, 5], fov: 45, near: 0.001, far: 1000 }}>
@@ -96,17 +103,19 @@ export function ViewportCanvas({
         />
 
         {modelUrl && (
-          <LoadedModel
-            key={modelUrl}
-            url={modelUrl}
-            onModelLoaded={onModelLoaded}
-            modelRef={modelRef}
-            selectedMeshUuid={selectedMeshUuid}
-          />
+          <Suspense fallback={<Loader />}>
+            <LoadedModel
+              key={modelUrl}
+              url={modelUrl}
+              onModelLoaded={onModelLoaded}
+              modelRef={modelRef}
+              selectedMeshUuid={selectedMeshUuid}
+            />
+          </Suspense>
         )}
 
         <OrbitControls makeDefault />
       </Canvas>
     </div>
   );
-}
+});
