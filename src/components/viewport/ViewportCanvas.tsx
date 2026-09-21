@@ -5,6 +5,7 @@ import { Suspense, useEffect, useRef } from "react";
 import { observer } from "mobx-react-lite";
 import { LoadedModel } from "./LoadedModel";
 import { Loader } from "./Loader";
+import { Env } from "./Env";
 import { useMainContext } from "../../context/MainContext";
 
 function CameraFitController({
@@ -104,12 +105,14 @@ export const ViewportCanvas = observer(() => {
 
         {modelUrl && (
           <Suspense fallback={<Loader />}>
+            <Env />
             <LoadedModel
               key={`${modelUrl}-${sideBarManager.loadKey}`}
               url={modelUrl}
               onModelLoaded={onModelLoaded}
               modelRef={modelRef}
               selectedMeshUuid={selectedMeshUuid}
+              selectedMaterial={sideBarManager.selectedMaterial}
             />
           </Suspense>
         )}

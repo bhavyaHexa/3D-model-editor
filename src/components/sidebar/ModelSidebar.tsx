@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useMainContext } from "../../context/MainContext";
+import { MaterialDropdown } from "./Material";
 
 export const ModelSidebar = observer(() => {
   const stateManager = useMainContext();
@@ -12,6 +13,8 @@ export const ModelSidebar = observer(() => {
     isDropdownOpen,
     toggleDropdown,
     closeDropdown,
+    isMaterialDropdownOpen,
+    closeMaterialDropdown,
   } = sideBarManager;
 
   return (
@@ -19,6 +22,7 @@ export const ModelSidebar = observer(() => {
       className="w-64 bg-gray-100 border-r border-gray-300 flex flex-col p-4"
       onClick={() => {
         if (isDropdownOpen) closeDropdown();
+        if (isMaterialDropdownOpen) closeMaterialDropdown();
       }}
     >
       <h2 className="text-gray-800 font-semibold text-sm mb-3">
@@ -58,6 +62,8 @@ export const ModelSidebar = observer(() => {
           </div>
         )}
       </div>
+
+      <MaterialDropdown />
     </aside>
   );
 });

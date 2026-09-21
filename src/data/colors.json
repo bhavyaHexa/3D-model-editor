@@ -1,0 +1,34 @@
+{
+    "fittingColor": {
+        "heading": "Fitting Color",
+        "data": [{
+                "id": 1,
+                "name": "Black",
+                "colorCode": "#000000",
+                "code": "3",
+                "image": ""
+            },
+            {
+                "id": 2,
+                "name": "Silver",
+                "colorCode": "#C0C0C0",
+                "image": "",
+                "code": "4"
+            },
+            {
+                "id": 3,
+                "name": "Gold",
+                "colorCode": "#e69f05",
+                "image": "",
+                "code": "5"
+            },
+            {
+                "id": 4,
+                "name": "Blue",
+                "colorCode": "#143d72",
+                "image": "",
+                "code": "6"
+            }
+        ]
+    }
+}

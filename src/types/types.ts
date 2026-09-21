@@ -1,4 +1,4 @@
-import type { ChangeEvent, RefObject } from "react";
+import type { RefObject } from "react";
 import * as THREE from "three";
 
 export interface ModelFile {
@@ -18,4 +18,11 @@ export interface LoadedModelProps {
   onModelLoaded: (clonedScene: THREE.Group) => void;
   modelRef: RefObject<THREE.Group | null>;
   selectedMeshUuid: string | null;
+  selectedMaterial: ColorCombination | null;
+}
+
+export interface ColorCombination {
+  id: number;
+  name: string;
+  meshMaterialMap: Record<string, string>;
 }
