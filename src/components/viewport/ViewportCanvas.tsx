@@ -105,7 +105,7 @@ export const ViewportCanvas = observer(() => {
         {modelUrl && (
           <Suspense fallback={<Loader />}>
             <LoadedModel
-              key={modelUrl}
+              key={`${modelUrl}-${sideBarManager.loadKey}`}
               url={modelUrl}
               onModelLoaded={onModelLoaded}
               modelRef={modelRef}
