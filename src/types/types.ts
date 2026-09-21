@@ -1,8 +1,6 @@
 import type { ChangeEvent, RefObject } from "react";
 import * as THREE from "three";
 
-export type TransformMode = "translate" | "rotate" | "scale";
-
 export interface ModelFile {
   id: string;
   name: string;
@@ -16,10 +14,6 @@ export interface MeshItem {
 }
 
 export interface HeaderProps {
-  transformMode: TransformMode;
-  setTransformMode: (mode: TransformMode) => void;
-  onApplyTransforms: () => void;
-  onExport: () => void;
   hasModel: boolean;
 }
 
@@ -39,7 +33,6 @@ export interface MeshInspectorProps {
 
 export interface ViewportCanvasProps {
   modelUrl?: string;
-  transformMode: TransformMode;
   onModelLoaded: (clonedScene: THREE.Group) => void;
   modelRef: RefObject<THREE.Group | null>;
   selectedMeshUuid: string | null;
@@ -47,7 +40,6 @@ export interface ViewportCanvasProps {
 
 export interface LoadedModelProps {
   url: string;
-  transformMode: TransformMode;
   onModelLoaded: (clonedScene: THREE.Group) => void;
   modelRef: RefObject<THREE.Group | null>;
   selectedMeshUuid: string | null;
@@ -58,8 +50,6 @@ export interface UseModelManagerReturn {
   selectedModel: ModelFile | null;
   setSelectedModel: (model: ModelFile | null) => void;
   meshes: MeshItem[];
-  transformMode: TransformMode;
-  setTransformMode: (mode: TransformMode) => void;
   handleFolderUpload: (event: ChangeEvent<HTMLInputElement>) => void;
   handleModelLoaded: (clonedScene: THREE.Group) => void;
   handleRenameMesh: (uuid: string, newName: string) => void;

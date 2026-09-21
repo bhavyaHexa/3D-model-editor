@@ -4,7 +4,6 @@ import * as THREE from "three";
 import type {
   ModelFile,
   MeshItem,
-  TransformMode,
   UseModelManagerReturn,
 } from "../types/types";
 import { extractGltfFiles } from "../utils/fileUtils";
@@ -14,8 +13,6 @@ export function useModelManager(): UseModelManagerReturn {
   const [selectedModel, setSelectedModel] = useState<ModelFile | null>(null);
   const [meshes, setMeshes] = useState<MeshItem[]>([]);
   const [selectedMeshUuid, setSelectedMeshUuid] = useState<string | null>(null);
-  const [transformMode, setTransformMode] =
-    useState<TransformMode>("translate");
 
   const handleFolderUpload = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
@@ -60,8 +57,6 @@ export function useModelManager(): UseModelManagerReturn {
     selectedModel,
     setSelectedModel,
     meshes,
-    transformMode,
-    setTransformMode,
     handleFolderUpload,
     handleModelLoaded,
     handleRenameMesh,

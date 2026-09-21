@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
-import { useGLTF, TransformControls } from "@react-three/drei";
+import { useEffect } from "react";
+import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import type { LoadedModelProps } from "../../types/types";
 
 export function LoadedModel({
   url,
-  transformMode,
   onModelLoaded,
   modelRef,
   selectedMeshUuid,
 }: LoadedModelProps) {
   const { scene } = useGLTF(url);
-  const [selectedMesh, setSelectedMesh] = useState<THREE.Object3D | null>(null);
 
   useEffect(() => {
     if (scene) {
@@ -35,19 +33,21 @@ export function LoadedModel({
             (outline as THREE.LineSegments).geometry.dispose();
           }
           if ((outline as THREE.LineSegments).material) {
-            ((outline as THREE.LineSegments).material as THREE.Material).dispose();
+            (
+              (outline as THREE.LineSegments).material as THREE.Material
+            ).dispose();
           }
         }
       });
 
-      let found: THREE.Object3D | null = null;
+
       if (selectedMeshUuid) {
         modelRef.current.traverse((child) => {
           if (child.uuid === selectedMeshUuid) {
-            found = child;
+
             if ((child as THREE.Mesh).isMesh) {
               const mesh = child as THREE.Mesh;
-              
+
               // Create an orange wireframe/edges highlight
               const edgesGeometry = new THREE.EdgesGeometry(mesh.geometry);
               const edgesMaterial = new THREE.LineBasicMaterial({
@@ -56,14 +56,16 @@ export function LoadedModel({
                 depthTest: false, // Ensures it draws over the mesh
                 transparent: true,
               });
-              const outlineLine = new THREE.LineSegments(edgesGeometry, edgesMaterial);
+              const outlineLine = new THREE.LineSegments(
+                edgesGeometry,
+                edgesMaterial,
+              );
               outlineLine.userData.isOutline = true;
               mesh.add(outlineLine);
             }
           }
         });
       }
-      setSelectedMesh(found);
     }
   }, [selectedMeshUuid, modelRef]);
 
@@ -71,9 +73,7 @@ export function LoadedModel({
 
   return (
     <>
-      <TransformControls mode={transformMode}>
-        <primitive object={modelRef.current} />
-      </TransformControls>
+      <primitive object={modelRef.current} />
     </>
   );
 }
