@@ -4,7 +4,7 @@ export const COLOR_COMBINATIONS: ColorCombination[] = [
   {
     id: 1,
     name: "Blue",
-    meshMaterialMap: {
+    materialMap: {
       Nut: "Blue",
       NutHead: "Blue",
       Crimp: "Blue",
@@ -14,7 +14,7 @@ export const COLOR_COMBINATIONS: ColorCombination[] = [
   {
     id: 2,
     name: "Black",
-    meshMaterialMap: {
+    materialMap: {
       Nut: "Black",
       NutHead: "Black",
       Crimp: "Black",
@@ -24,7 +24,7 @@ export const COLOR_COMBINATIONS: ColorCombination[] = [
   {
     id: 3,
     name: "Stainless Steel",
-    meshMaterialMap: {
+    materialMap: {
       Nut: "Stainless Steel",
       NutHead: "Stainless Steel",
       Crimp: "Stainless Steel",
@@ -34,7 +34,7 @@ export const COLOR_COMBINATIONS: ColorCombination[] = [
   {
     id: 4,
     name: "Stainless Blue",
-    meshMaterialMap: {
+    materialMap: {
       Nut: "Blue",
       NutHead: "Stainless Steel",
       Crimp: "Stainless Steel",
@@ -44,7 +44,7 @@ export const COLOR_COMBINATIONS: ColorCombination[] = [
   {
     id: 5,
     name: "Stainless Black",
-    meshMaterialMap: {
+    materialMap: {
       Nut: "Black",
       NutHead: "Stainless Steel",
       Crimp: "Stainless Steel",

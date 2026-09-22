@@ -1,4 +1,11 @@
-import type { MeshInspectorProps } from "../../types/types";
+import type { MeshItem } from "../../types/types";
+
+export interface MeshInspectorProps {
+  meshes: MeshItem[];
+  onRenameMesh: (uuid: string, newName: string) => void;
+  selectedMeshUuid: string | null;
+  onSelectMesh: (uuid: string) => void;
+}
 
 export function MeshInspector({ meshes, onRenameMesh, selectedMeshUuid, onSelectMesh }: MeshInspectorProps) {
   return (
