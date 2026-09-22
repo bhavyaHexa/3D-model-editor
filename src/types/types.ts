@@ -5,6 +5,14 @@ export interface ModelFile {
   id: string;
   name: string;
   url: string;
+  colorCombination?: ColorCombination[];
+}
+
+export interface CrimpColor {
+  id: number;
+  name: string;
+  colorCode: string;
+  description: string;
 }
 
 export interface MeshItem {
@@ -19,10 +27,11 @@ export interface LoadedModelProps {
   modelRef: RefObject<THREE.Group | null>;
   selectedMeshUuid: string | null;
   selectedMaterial: ColorCombination | null;
+  selectedCrimpColor?: CrimpColor | null;
 }
 
 export interface ColorCombination {
   id: number;
   name: string;
-  meshMaterialMap: Record<string, string>;
+  materialMap: Record<string, string>;
 }

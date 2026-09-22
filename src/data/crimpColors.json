@@ -1,0 +1,29 @@
+{
+  "heading": "Crimp Colors",
+  "crimpColors": [
+    {
+      "id": 1,
+      "name": "Gold",
+      "colorCode": "#e69f05",
+      "description": "Standard with blue fittings"
+    },
+    {
+      "id": 2,
+      "name": "Black",
+      "colorCode": "#111111",
+      "description": "Standard with black fittings"
+    },
+    {
+      "id": 3,
+      "name": "Clear Ano.",
+      "colorCode": "#A3A3A3",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "name": "Stainless",
+      "colorCode": "#D1D5DB",
+      "description": "Use only with stainless fittings"
+    }
+  ]
+}

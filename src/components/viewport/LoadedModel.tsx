@@ -20,6 +20,7 @@ export function LoadedModel({
   modelRef,
   selectedMeshUuid,
   selectedMaterial,
+  selectedCrimpColor,
 }: LoadedModelProps) {
   const { scene } = useGLTF(url);
 
@@ -47,24 +48,37 @@ export function LoadedModel({
   }, [scene, onModelLoaded, modelRef]);
 
   useEffect(() => {
-    if (scene && selectedMaterial) {
+    if (scene) {
       scene.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
           const mesh = child as THREE.Mesh;
-          const mappedColorName = selectedMaterial.meshMaterialMap[mesh.name];
 
-          if (mappedColorName) {
-            // Check lookup dictionary
-            const targetMaterial = materialLookup[mappedColorName as keyof typeof materialLookup];
-            if (targetMaterial) {
-              // Apply the extracted authentic material directly
-              mesh.material = targetMaterial;
+          if (mesh.name === "Crimp" && selectedCrimpColor) {
+            const newMaterial = new THREE.MeshStandardMaterial({
+              color: selectedCrimpColor.colorCode,
+              metalness: 0.8,
+              roughness: 0.2
+            });
+            mesh.material = newMaterial;
+            return;
+          }
+
+          if (selectedMaterial) {
+            const mappedColorName = selectedMaterial.materialMap[mesh.name];
+
+            if (mappedColorName) {
+              // Check lookup dictionary
+              const targetMaterial = materialLookup[mappedColorName as keyof typeof materialLookup];
+              if (targetMaterial) {
+                // Apply the extracted authentic material directly
+                mesh.material = targetMaterial;
+              }
             }
           }
         }
       });
     }
-  }, [scene, selectedMaterial, materialLookup]);
+  }, [scene, selectedMaterial, materialLookup, selectedCrimpColor]);
 
   useEffect(() => {
     if (scene) {

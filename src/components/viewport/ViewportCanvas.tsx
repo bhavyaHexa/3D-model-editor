@@ -84,7 +84,7 @@ export const ViewportCanvas = observer(() => {
   const stateManager = useMainContext();
   const { modelLoadManager } = stateManager.design3DManager;
   const { sideBarManager } = stateManager.designManager;
-  
+
   const modelRef = useRef<THREE.Group | null>(null);
 
   const modelUrl = sideBarManager.selectedModel?.url;
@@ -93,11 +93,17 @@ export const ViewportCanvas = observer(() => {
 
   return (
     <div className="flex-1 h-full bg-white relative">
-      <Canvas camera={{ position: [5, 5, 5], fov: 45, near: 0.001, far: 1000 }}>
+      <Canvas 
+        camera={{ position: [5, 5, 5], fov: 45, near: 0.001, far: 1000 }}
+        shadows
+        gl={{
+          toneMapping: THREE.ACESFilmicToneMapping,
+          toneMappingExposure: 0.9,
+        }}
+      >
         <ambientLight intensity={0.8} />
         <directionalLight position={[10, 10, 5]} intensity={1.2} />
 
-        <gridHelper args={[20, 20, "#e5e7eb", "#f3f4f6"]} />
         <CameraFitController
           modelRef={modelRef}
           selectedMeshUuid={selectedMeshUuid}
@@ -113,6 +119,7 @@ export const ViewportCanvas = observer(() => {
               modelRef={modelRef}
               selectedMeshUuid={selectedMeshUuid}
               selectedMaterial={sideBarManager.selectedMaterial}
+              selectedCrimpColor={sideBarManager.selectedCrimpColor}
             />
           </Suspense>
         )}

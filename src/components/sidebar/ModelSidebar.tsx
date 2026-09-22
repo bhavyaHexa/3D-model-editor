@@ -1,10 +1,14 @@
 import { observer } from "mobx-react-lite";
 import { useMainContext } from "../../context/MainContext";
 import { MaterialDropdown } from "./Material";
+import { CrimpDropdown } from "./CrimpDropdown";
 
 export const ModelSidebar = observer(() => {
   const stateManager = useMainContext();
   const { sideBarManager } = stateManager.designManager;
+  const { modelLoadManager } = stateManager.design3DManager;
+
+  const hasCrimpMesh = modelLoadManager.meshes.some(mesh => mesh.name === "Crimp");
 
   const {
     modelFiles,
@@ -15,6 +19,8 @@ export const ModelSidebar = observer(() => {
     closeDropdown,
     isMaterialDropdownOpen,
     closeMaterialDropdown,
+    isCrimpDropdownOpen,
+    closeCrimpDropdown
   } = sideBarManager;
 
   return (
@@ -23,6 +29,7 @@ export const ModelSidebar = observer(() => {
       onClick={() => {
         if (isDropdownOpen) closeDropdown();
         if (isMaterialDropdownOpen) closeMaterialDropdown();
+        if (isCrimpDropdownOpen) closeCrimpDropdown();
       }}
     >
       <h2 className="text-gray-800 font-semibold text-sm mb-3">
@@ -64,6 +71,7 @@ export const ModelSidebar = observer(() => {
       </div>
 
       <MaterialDropdown />
+      {hasCrimpMesh && <CrimpDropdown />}
     </aside>
   );
 });
