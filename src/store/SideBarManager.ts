@@ -43,9 +43,9 @@ export class SideBarManager {
       useGLTF.clear(model.url);
       this.materials = model.colorCombination || [];
       if (this.materials.length > 0) {
-        this.selectedMaterial = this.materials[0];
+        this.setSelectedMaterial(this.materials[0]);
       } else {
-        this.selectedMaterial = null;
+        this.setSelectedMaterial(null);
       }
     } else {
       this.materials = [];
