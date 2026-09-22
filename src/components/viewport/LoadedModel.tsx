@@ -61,10 +61,14 @@ const SubMeshMaterialLoader = memo(
       }
 
       if (isCrimpMesh && selectedCrimpColor) {
-        const mat = new THREE.MeshStandardMaterial({
+        const isStainless = selectedCrimpColor.name.toLowerCase().includes("stainless");
+        const mat = new THREE.MeshPhysicalMaterial({
+          clearcoat: 0.1,
+          clearcoatRoughness: 0.1,
           color: new THREE.Color(selectedCrimpColor.colorCode),
-          roughness: 0.2,
-          metalness: 0.8,
+          metalness: isStainless ? 0.95 : 0.8,
+          reflectivity: 0.9,
+          roughness: isStainless ? 0.15 : 0.25,
         });
         return mat;
       }

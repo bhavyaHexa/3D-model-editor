@@ -24,6 +24,13 @@ export const ViewportCanvas = observer(() => {
   return (
     <div className="flex-1 h-full bg-blueprint-grid relative">
       <FeedbackButtons />
+      {sideBarManager.selectedModel?.name && (
+        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+          <h2 className="text-black-200 font-bold text-2xl tracking-wide">
+            {sideBarManager.selectedModel.name}
+          </h2>
+        </div>
+      )}
       <Canvas
         camera={{ position: [0, 2, 7.5], fov: 45, near: 0.001, far: 1000 }}
         shadows
@@ -52,7 +59,12 @@ export const ViewportCanvas = observer(() => {
           </Suspense>
         )}
 
-        <OrbitControls makeDefault minDistance={5} maxDistance={10} enablePan={false} />
+        <OrbitControls
+          makeDefault
+          minDistance={5}
+          maxDistance={10}
+          enablePan={false}
+        />
       </Canvas>
     </div>
   );
