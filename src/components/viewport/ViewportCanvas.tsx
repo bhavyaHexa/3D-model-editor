@@ -92,7 +92,7 @@ export const ViewportCanvas = observer(() => {
   const onModelLoaded = modelLoadManager.handleModelLoaded;
 
   return (
-    <div className="flex-1 h-full bg-white relative">
+    <div className="flex-1 h-full bg-blueprint-grid relative">
       <Canvas 
         camera={{ position: [5, 5, 5], fov: 45, near: 0.001, far: 1000 }}
         shadows

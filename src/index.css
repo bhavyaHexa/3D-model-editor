@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .bg-blueprint-grid {
+    background-color: #f8fafc; /* Very light slate/grey */
+    background-image: 
+      linear-gradient(#e2e8f0 1px, transparent 1px),
+      linear-gradient(90deg, #e2e8f0 1px, transparent 1px),
+      linear-gradient(#f1f5f9 1px, transparent 1px),
+      linear-gradient(90deg, #f1f5f9 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 20px 20px, 20px 20px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+  }
+}
