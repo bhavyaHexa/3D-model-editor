@@ -9,7 +9,7 @@
         "name": "Blue",
         "materialMap": {
           "Nut": "Blue",
-          "BanjoBolt": "Blue",
+          "Pipe": "Blue",
           "Crimp": "Blue",
           "Circlip": "Blue"
         }
@@ -19,7 +19,7 @@
         "name": "Black",
         "materialMap": {
           "Nut": "Black",
-          "BanjoBolt": "Black",
+          "Pipe": "Black",
           "Crimp": "Black",
           "Circlip": "Black"
         }
@@ -29,11 +29,20 @@
         "name": "Stainless Steel",
         "materialMap": {
           "Nut": "Stainless Steel",
-          "BanjoBolt": "Stainless Steel",
+          "Pipe": "Stainless Steel",
           "Crimp": "Stainless Steel",
           "Circlip": "Stainless Steel"
         }
-      }
+      }, 
+      {
+        "id": 4,
+        "name": "Aluminum Banjow/Stainless Steel Bolt",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      } 
     ]
   },
   {
@@ -129,24 +138,13 @@
       },
       {
         "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "name": "Aluminum Banjow/Stainless Steel Bolt",
         "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
+          "Nut": "Stainless Steel",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
         }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      }
+      }     
     ]
   },
   {
@@ -158,9 +156,9 @@
         "id": 1,
         "name": "Blue",
         "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
           "Crimp": "Blue",
+          "Crimp2": "Blue",
+          "Crimp3": "Blue",
           "Pipe": "Blue"
         }
       },
@@ -168,39 +166,19 @@
         "id": 2,
         "name": "Black",
         "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
           "Crimp": "Black",
+          "Crimp2": "Black",
+          "Crimp3": "Black",
           "Pipe": "Black"
         }
       },
       {
         "id": 3,
         "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
+         "materialMap": {
           "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
+          "Crimp2": "Stainless Steel",
+          "Crimp3": "Stainless Steel",
           "Pipe": "Stainless Steel"
         }
       }
@@ -275,7 +253,7 @@
           "Nut": "Blue",
           "NutHead": "Blue",
           "Crimp": "Blue",
-          "Pipe": "Blue"
+          "Pipe": "Black"
         }
       },
       {
@@ -300,7 +278,7 @@
       },
       {
         "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "name": "Stainless Elbow w/Aluminum Nut & Insert",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
@@ -310,7 +288,7 @@
       },
       {
         "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "name": "Stainless Elbow w/Aluminum Nut & Insert",
         "materialMap": {
           "Nut": "Black",
           "NutHead": "Black",
@@ -344,36 +322,6 @@
           "Crimp": "Black",
           "Pipe": "Black"
         }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
       }
     ]
   },
@@ -400,36 +348,6 @@
           "NutHead": "Black",
           "Crimp": "Black",
           "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -458,36 +376,6 @@
           "Crimp": "Black",
           "Pipe": "Black"
         }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
       }
     ]
   },
@@ -498,52 +386,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Blue",
-          "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
         "name": "Black",
         "materialMap": {
           "Nut": "Black",
           "NutHead": "Black",
           "Crimp": "Black",
           "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -572,36 +420,6 @@
           "Crimp": "Black",
           "Pipe": "Black"
         }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
       }
     ]
   },
@@ -628,36 +446,6 @@
           "NutHead": "Black",
           "Crimp": "Black",
           "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -686,36 +474,6 @@
           "Crimp": "Black",
           "Pipe": "Black"
         }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
       }
     ]
   },
@@ -742,36 +500,6 @@
           "NutHead": "Black",
           "Crimp": "Black",
           "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -800,36 +528,6 @@
           "Crimp": "Black",
           "Pipe": "Black"
         }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
       }
     ]
   },
@@ -843,49 +541,9 @@
         "name": "Blue",
         "materialMap": {
           "Nut": "Blue",
-          "NutHead": "Blue",
+          "KeepPlate": "Blue",
           "Crimp": "Blue",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -914,36 +572,6 @@
           "Crimp": "Black",
           "Pipe": "Black"
         }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
       }
     ]
   },
@@ -954,52 +582,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Socket": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1011,52 +599,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Bolt": "Blue",
+          "Socket": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1068,52 +616,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Socket": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1125,52 +633,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Socket": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1182,52 +650,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Socket": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1239,52 +667,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Collar": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1296,52 +684,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Collar": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1353,52 +701,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Collar": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1410,52 +718,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Collar": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1467,52 +735,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Collar": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1524,52 +752,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Crimp": "Blue",
+          "Collar": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]
@@ -1581,52 +769,12 @@
     "colorCombination": [
       {
         "id": 1,
-        "name": "Blue",
+        "name": "Blue Gold",
         "materialMap": {
           "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Blue",
+          "KeepPlate": "Blue",
+          "Collar": "Gold",
           "Pipe": "Blue"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Black",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Black",
-          "Pipe": "Black"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Stainless Steel",
-        "materialMap": {
-          "Nut": "Stainless Steel",
-          "NutHead": "Stainless Steel",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
-        "materialMap": {
-          "Nut": "Blue",
-          "NutHead": "Blue",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
-        "materialMap": {
-          "Nut": "Black",
-          "NutHead": "Black",
-          "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
         }
       }
     ]

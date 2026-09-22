@@ -18,6 +18,11 @@
       "name": "Stainless Steel",
       "materialURL": "/materials/Stainless_Steel.glb",
       "colorCode": "#C0C0C0"
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "colorCode": "#e69f05"
     }
   ]
 }

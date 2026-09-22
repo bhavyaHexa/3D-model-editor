@@ -47,28 +47,38 @@ const SubMeshMaterialLoader = memo(
       }
     }
 
+    const highlightMaterial = useMemo(() => {
+      return new THREE.MeshStandardMaterial({
+        color: new THREE.Color(0xf97316),
+        roughness: 0.2,
+        metalness: 0.8,
+      });
+    }, []);
+
     const activeMaterial = useMemo(() => {
-      // 1. Crimp Check
-      if (isCrimpMesh && selectedCrimpColor) {
-        return new THREE.MeshPhysicalMaterial({
-          color: selectedCrimpColor.colorCode,
-          metalness: 0.85,
-          roughness: 0.2,
-          clearcoat: 0.1,
-          clearcoatRoughness: 0.1,
-          reflectivity: 0.9,
-        });
+      if (isSelected) {
+        return highlightMaterial;
       }
 
-      // 2. GLB Material Check
-      if (gltfMaterials && Object.keys(gltfMaterials).length > 0) {
-        const extracted = Object.values(gltfMaterials)[0];
-        if (extracted) {
-          return (extracted as THREE.Material).clone();
+      if (isCrimpMesh && selectedCrimpColor) {
+        const mat = new THREE.MeshStandardMaterial({
+          color: new THREE.Color(selectedCrimpColor.colorCode),
+          roughness: 0.2,
+          metalness: 0.8,
+        });
+        return mat;
+      }
+
+      if (gltfMaterials) {
+        const materialValues = Object.values(gltfMaterials);
+        if (materialValues.length > 0) {
+          const mat = materialValues[0].clone();
+          mat.needsUpdate = true;
+          return mat;
         }
       }
 
-      // 3. Fallback Color Logic (Matches exact BMRS-FE values)
+      // Fallback to generating a material dynamically if there is a colorCode but no GLB
       if (matItem?.colorCode) {
         const isStainless = matItem.name.toLowerCase().includes("stainless");
         return new THREE.MeshPhysicalMaterial({
