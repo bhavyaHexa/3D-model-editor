@@ -4,7 +4,7 @@ import { useMainContext } from "../../context/MainContext";
 import { DialogueBox } from "./DialogueBox";
 
 const WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbyTDq42voKquASHzVLQm4txCPmwfrLXwn5oEkzkirwcW4aGDFTcyUoJ12ENbiJPWKAj/exec";
+  "https://script.google.com/macros/s/AKfycbwJLhckcZcveIiRxTecnO6jTGewsGFE8VTO0k8szTVcBT2h2vLfVcjRpeE6nDMHvo1e/exec";
 
 export const FeedbackButtons = observer(() => {
   const stateManager = useMainContext();
