@@ -6,7 +6,7 @@ import { Utils3D } from "../utils/Utils3D";
 
 export class EnvManager {
   private _envVisibility = false;
-  private _envIntensity = 0.8;
+  private _envIntensity = 1;
   private _envRotation: { x: number; y: number; z: number } = {
     x: 0,
     y: -Math.PI / 6,

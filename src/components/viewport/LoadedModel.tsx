@@ -1,18 +1,129 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, memo } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import type { LoadedModelProps } from "../../types/types";
-import materialPaths from "../../data/materials.json";
+import materialsDataRaw from "../../data/materials.json";
 
-function extractMaterial(gltf: any): THREE.Material | null {
-  let material: THREE.Material | null = null;
-  gltf.scene.traverse((child: any) => {
-    if (!material && child.isMesh && child.material) {
-      material = child.material;
-    }
-  });
-  return material;
+const materialsData = materialsDataRaw.materials;
+
+interface SubMeshProps {
+  node: THREE.Mesh;
+  selectedMaterial: any;
+  selectedCrimpColor: any;
+  isSelected: boolean;
+  defaultMaterial: THREE.Material;
 }
+
+const SubMeshMaterialLoader = memo(
+  ({
+    node,
+    selectedMaterial,
+    selectedCrimpColor,
+    isSelected,
+    defaultMaterial,
+  }: SubMeshProps) => {
+    const isCrimpMesh = node.name === "Crimp";
+
+    const mappedColorName = selectedMaterial
+      ? selectedMaterial.materialMap[node.name]
+      : null;
+
+    const matItem = mappedColorName
+      ? materialsData.find(
+          (m) => m.name.toLowerCase() === mappedColorName.toLowerCase()
+        )
+      : null;
+
+    const materialUrl = matItem?.materialURL ?? null;
+
+    let gltfMaterials: Record<string, THREE.Material> | undefined;
+    if (materialUrl) {
+      try {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const gltf = useGLTF(materialUrl);
+        gltfMaterials = gltf.materials;
+      } catch {
+        // Silently handle if material GLB is missing
+      }
+    }
+
+    const activeMaterial = useMemo(() => {
+      // 1. Crimp Check
+      if (isCrimpMesh && selectedCrimpColor) {
+        return new THREE.MeshPhysicalMaterial({
+          color: selectedCrimpColor.colorCode,
+          metalness: 0.85,
+          roughness: 0.2,
+          clearcoat: 0.1,
+          clearcoatRoughness: 0.1,
+          reflectivity: 0.9,
+        });
+      }
+
+      // 2. GLB Material Check
+      if (gltfMaterials && Object.keys(gltfMaterials).length > 0) {
+        const extracted = Object.values(gltfMaterials)[0];
+        if (extracted) {
+          return (extracted as THREE.Material).clone();
+        }
+      }
+
+      // 3. Fallback Color Logic (Matches exact BMRS-FE values)
+      if (matItem?.colorCode) {
+        const isStainless = matItem.name.toLowerCase().includes("stainless");
+        return new THREE.MeshPhysicalMaterial({
+          clearcoat: 0.1,
+          clearcoatRoughness: 0.1,
+          color: new THREE.Color(matItem.colorCode),
+          metalness: isStainless ? 0.95 : 0.8,
+          reflectivity: 0.9,
+          roughness: isStainless ? 0.15 : 0.25,
+        });
+      }
+
+      // 4. Default Base Material Check
+      return node.material || defaultMaterial;
+    }, [
+      isCrimpMesh,
+      selectedCrimpColor,
+      gltfMaterials,
+      matItem,
+      node.material,
+      defaultMaterial,
+    ]);
+
+    // Handle selection outline declaratively
+    const edgesGeometry = useMemo(() => {
+      if (isSelected && node.geometry) {
+        return new THREE.EdgesGeometry(node.geometry);
+      }
+      return null;
+    }, [isSelected, node.geometry]);
+
+    return (
+      <mesh
+        geometry={node.geometry}
+        material={activeMaterial}
+        position={node.position}
+        rotation={node.rotation}
+        scale={node.scale}
+        name={node.name}
+        userData={node.userData}
+      >
+        {isSelected && edgesGeometry && (
+          <lineSegments geometry={edgesGeometry}>
+            <lineBasicMaterial
+              color={0xf97316}
+              linewidth={2}
+              depthTest={false}
+              transparent={true}
+            />
+          </lineSegments>
+        )}
+      </mesh>
+    );
+  }
+);
 
 export function LoadedModel({
   url,
@@ -22,121 +133,48 @@ export function LoadedModel({
   selectedMaterial,
   selectedCrimpColor,
 }: LoadedModelProps) {
-  const { scene } = useGLTF(url);
+  const { scene, nodes } = useGLTF(url);
 
-  // Load the material GLBs
-  const blueGltf = useGLTF(materialPaths.Blue as string);
-  const blackGltf = useGLTF(materialPaths.Black as string);
-  const stainlessGltf = useGLTF(materialPaths["Stainless Steel"] as string);
-
-  // Extract materials once
-  const materialLookup = useMemo(() => {
-    return {
-      "Blue": extractMaterial(blueGltf),
-      "Black": extractMaterial(blackGltf),
-      "Stainless Steel": extractMaterial(stainlessGltf),
-    };
-  }, [blueGltf, blackGltf, stainlessGltf]);
+  // Create the default fitting material (Silver default matching BMRS-FE)
+  const fittingMaterial = useMemo(() => {
+    return new THREE.MeshPhysicalMaterial({
+      clearcoat: 0.1,
+      clearcoatRoughness: 0.1,
+      color: new THREE.Color("#C0C0C0"), // Global default colorCode
+      metalness: 0.8,
+      reflectivity: 0.9,
+      roughness: 0.25,
+    });
+  }, []);
 
   useEffect(() => {
     if (scene) {
-      (modelRef as React.MutableRefObject<typeof scene>).current = scene;
+      if (modelRef) {
+        (modelRef as React.MutableRefObject<typeof scene>).current = scene;
+      }
       onModelLoaded(scene);
-      // Dispatch custom event to notify camera controller
       window.dispatchEvent(new CustomEvent("model-loaded"));
     }
   }, [scene, onModelLoaded, modelRef]);
 
-  useEffect(() => {
-    if (scene) {
-      scene.traverse((child) => {
-        if ((child as THREE.Mesh).isMesh) {
-          const mesh = child as THREE.Mesh;
-
-          if (mesh.name === "Crimp" && selectedCrimpColor) {
-            const newMaterial = new THREE.MeshStandardMaterial({
-              color: selectedCrimpColor.colorCode,
-              metalness: 0.8,
-              roughness: 0.2
-            });
-            mesh.material = newMaterial;
-            return;
-          }
-
-          if (selectedMaterial) {
-            const mappedColorName = selectedMaterial.materialMap[mesh.name];
-
-            if (mappedColorName) {
-              // Check lookup dictionary
-              const targetMaterial = materialLookup[mappedColorName as keyof typeof materialLookup];
-              if (targetMaterial) {
-                // Apply the extracted authentic material directly
-                mesh.material = targetMaterial;
-              }
-            }
-          }
-        }
-      });
-    }
-  }, [scene, selectedMaterial, materialLookup, selectedCrimpColor]);
-
-  useEffect(() => {
-    if (scene) {
-      // First, remove any existing outlines
-      scene.traverse((child) => {
-        const outline = child.children.find((c) => c.userData.isOutline);
-        if (outline) {
-          child.remove(outline);
-          if ((outline as THREE.LineSegments).geometry) {
-            (outline as THREE.LineSegments).geometry.dispose();
-          }
-          if ((outline as THREE.LineSegments).material) {
-            (
-              (outline as THREE.LineSegments).material as THREE.Material
-            ).dispose();
-          }
-        }
-      });
-
-
-      if (selectedMeshUuid) {
-        scene.traverse((child) => {
-          if (child.uuid === selectedMeshUuid) {
-
-            if ((child as THREE.Mesh).isMesh) {
-              const mesh = child as THREE.Mesh;
-
-              // Create an orange wireframe/edges highlight
-              const edgesGeometry = new THREE.EdgesGeometry(mesh.geometry);
-              const edgesMaterial = new THREE.LineBasicMaterial({
-                color: 0xf97316, // Orange
-                linewidth: 2,
-                depthTest: false, // Ensures it draws over the mesh
-                transparent: true,
-              });
-              const outlineLine = new THREE.LineSegments(
-                edgesGeometry,
-                edgesMaterial,
-              );
-              outlineLine.userData.isOutline = true;
-              mesh.add(outlineLine);
-            }
-          }
-        });
-      }
-    }
-  }, [selectedMeshUuid, scene]);
-
   return (
-    <>
-      <primitive object={scene} />
-    </>
+    <group>
+      {Object.values(nodes).map((node) => {
+        if ((node as THREE.Mesh).isMesh) {
+          const meshNode = node as THREE.Mesh;
+          return (
+            <SubMeshMaterialLoader
+              key={meshNode.uuid}
+              node={meshNode}
+              selectedMaterial={selectedMaterial}
+              selectedCrimpColor={selectedCrimpColor}
+              isSelected={selectedMeshUuid === meshNode.uuid}
+              defaultMaterial={fittingMaterial}
+            />
+          );
+        }
+        return null;
+      })}
+    </group>
   );
 }
-
-// @ts-ignore
-useGLTF.preload(materialPaths.Blue as string);
-// @ts-ignore
-useGLTF.preload(materialPaths.Black as string);
-// @ts-ignore
-useGLTF.preload(materialPaths["Stainless Steel"] as string);

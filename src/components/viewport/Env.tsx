@@ -13,15 +13,14 @@ export const Env = observer(() => {
 
   return (
     <Environment background={envManager.envVisibility}>
-      <color attach="background" args={["black"]} />
+      <color attach="background" args={['black']} />
       <mesh
         rotation={[
           envManager.envRotation.x,
           envManager.envRotation.y,
           envManager.envRotation.z,
         ]}
-        scale={100}
-      >
+        scale={100}>
         <sphereGeometry />
         <meshBasicMaterial
           transparent
@@ -32,52 +31,19 @@ export const Env = observer(() => {
         />
       </mesh>
 
-      {/* LightFormers from all sides to prevent dark spots */}
-      {/* Back */}
+      {/* LightFormer at the back side of the hose pipe */}
       <Lightformer
         form="rect"
-        intensity={0.5}
+        intensity={1.5}
         position={[0, 0, -5]}
         scale={[10, 10, 10]}
         target={[0, 0, 0]}
       />
-      {/* Front */}
+
       <Lightformer
         form="rect"
-        intensity={0.5}
-        position={[0, 0, 5]}
-        scale={[10, 10, 10]}
-        target={[0, 0, 0]}
-      />
-      {/* Left */}
-      <Lightformer
-        form="rect"
-        intensity={1}
+        intensity={3}
         position={[-5, 0, 0]}
-        scale={[10, 10, 10]}
-        target={[0, 0, 0]}
-      />
-      {/* Right */}
-      <Lightformer
-        form="rect"
-        intensity={0.5}
-        position={[5, 0, 0]}
-        scale={[10, 10, 10]}
-        target={[0, 0, 0]}
-      />
-      {/* Top */}
-      <Lightformer
-        form="rect"
-        intensity={0.8}
-        position={[0, 5, 0]}
-        scale={[10, 10, 10]}
-        target={[0, 0, 0]}
-      />
-      {/* Bottom */}
-      <Lightformer
-        form="rect"
-        intensity={0.2}
-        position={[0, -5, 0]}
         scale={[10, 10, 10]}
         target={[0, 0, 0]}
       />

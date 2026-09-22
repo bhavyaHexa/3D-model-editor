@@ -1,5 +1,23 @@
 {
-  "Blue": "/materials/Blue.glb",
-  "Black": "/materials/Black.glb",
-  "Stainless Steel": "/materials/Stainless_Steel.glb"
+  "heading": "Fitting Materials",
+  "materials": [
+    {
+      "id": "blue",
+      "name": "Blue",
+      "materialURL": "/materials/Blue.glb",
+      "colorCode": "#143d72"
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "materialURL": "/materials/Black.glb",
+      "colorCode": "#000000"
+    },
+    {
+      "id": "stainless",
+      "name": "Stainless Steel",
+      "materialURL": "/materials/Stainless_Steel.glb",
+      "colorCode": "#C0C0C0"
+    }
+  ]
 }
