@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+fetch("https://script.google.com/macros/s/AKfycbwJLhckcZcveIiRxTecnO6jTGewsGFE8VTO0k8szTVcBT2h2vLfVcjRpeE6nDMHvo1e/exec")
+  .then(res => res.json())
+  .then(data => document.body.innerHTML = JSON.stringify(data))
+  .catch(err => document.body.innerHTML = "ERROR: " + err.message);
+</script>
+</body>
+</html>

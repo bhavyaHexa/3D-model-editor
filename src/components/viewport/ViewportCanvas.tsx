@@ -7,6 +7,7 @@ import { LoadedModel } from "./LoadedModel";
 import { Loader } from "./Loader";
 import { Env } from "./Env";
 import { useMainContext } from "../../context/MainContext";
+import { FeedbackButtons } from "./FeedbackButtons";
 
 function CameraFitController({
   modelRef,
@@ -93,6 +94,7 @@ export const ViewportCanvas = observer(() => {
 
   return (
     <div className="flex-1 h-full bg-blueprint-grid relative">
+      <FeedbackButtons />
       <Canvas 
         camera={{ position: [5, 5, 5], fov: 45, near: 0.001, far: 1000 }}
         shadows
