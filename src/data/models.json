@@ -1,77 +1,1634 @@
 [
   {
-    "id": "AC-06-30JIC-3",
-    "name": "AC-06-30JIC-3",
-    "url": "/models/RitenBhaiModelling/AC-06-30JIC-3.glb"
+    "id": "AC-06-0017-3",
+    "name": "AC-06-0017-3",
+    "url": "/models/ClientModel/AC-06-0017-3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "BanjoBolt": "Blue",
+          "Crimp": "Blue",
+          "Circlip": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "BanjoBolt": "Black",
+          "Crimp": "Black",
+          "Circlip": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "BanjoBolt": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Circlip": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-30JICDS-3",
-    "name": "AC-06-30JICDS-3",
-    "url": "/models/RitenBhaiModelling/AC-06-30JICDS-3.glb"
+    "id": "AC-06-0032-00",
+    "name": "AC-06-0032-00",
+    "url": "/models/ClientModel/AC-06-0032-00.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-60JIC-3",
-    "name": "AC-06-60JIC-3",
-    "url": "/models/RitenBhaiModelling/AC-06-60JIC-3.glb"
+    "id": "AC-06-J3",
+    "name": "AC-06-J3",
+    "url": "/models/ClientModel/AC-06-J3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "Crimp": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "Crimp": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-60JICDS-3",
-    "name": "AC-06-60JICDS-3",
-    "url": "/models/RitenBhaiModelling/AC-06-60JICDS-3.glb"
+    "id": "AC-08-0002",
+    "name": "AC-08-0002",
+    "url": "/models/ClientModel/AC-08-0002.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-B-H3",
-    "name": "AC-06-B-H3",
-    "url": "/models/RitenBhaiModelling/AC-06-B-H3.glb"
+    "id": "AC-08-0027",
+    "name": "AC-08-0027",
+    "url": "/models/ClientModel/AC-08-0027.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-F3",
-    "name": "AC-06-F3",
-    "url": "/models/RitenBhaiModelling/AC-06-F3.glb"
+    "id": "AC-08-G3",
+    "name": "AC-08-G3",
+    "url": "/models/ClientModel/AC-08-G3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-G3-DS",
-    "name": "AC-06-G3-DS",
-    "url": "/models/RitenBhaiModelling/AC-06-G3-DS.glb"
+    "id": "AC-08-H3-DS",
+    "name": "AC-08-H3-DS",
+    "url": "/models/ClientModel/AC-08-H3-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-G3",
-    "name": "AC-06-G3",
-    "url": "/models/RitenBhaiModelling/AC-06-G3.glb"
+    "id": "AC-08-M3-120",
+    "name": "AC-08-M3-120",
+    "url": "/models/ClientModel/AC-08-M3-120.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-H3-DS",
-    "name": "AC-06-H3-DS",
-    "url": "/models/RitenBhaiModelling/AC-06-H3-DS.glb"
+    "id": "AC-08-ST-BSP",
+    "name": "AC-08-ST-BSP",
+    "url": "/models/ClientModel/AC-08-ST-BSP.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-H3",
-    "name": "AC-06-H3",
-    "url": "/models/RitenBhaiModelling/AC-06-H3.glb"
+    "id": "AC-10-0019",
+    "name": "AC-10-0019",
+    "url": "/models/ClientModel/AC-10-0019.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-P3-DS",
-    "name": "AC-06-P3-DS",
-    "url": "/models/RitenBhaiModelling/AC-06-P3-DS.glb"
+    "id": "AC-10-0033-45",
+    "name": "AC-10-0033-45",
+    "url": "/models/ClientModel/AC-10-0033-45.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-P3",
-    "name": "AC-06-P3",
-    "url": "/models/RitenBhaiModelling/AC-06-P3.glb"
+    "id": "AC-12-45-BSP-DS",
+    "name": "AC-12-45-BSP-DS",
+    "url": "/models/ClientModel/AC-12-45-BSP-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-R3-DS",
-    "name": "AC-06-R3-DS",
-    "url": "/models/RitenBhaiModelling/AC-06-R3-DS.glb"
+    "id": "AC-12-60-WF",
+    "name": "AC-12-60-WF",
+    "url": "/models/ClientModel/AC-12-60-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-R3",
-    "name": "AC-06-R3",
-    "url": "/models/RitenBhaiModelling/AC-06-R3.glb"
+    "id": "AC-12-60-WFFD",
+    "name": "AC-12-60-WFFD",
+    "url": "/models/ClientModel/AC-12-60-WFFD.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   },
   {
-    "id": "AC-06-S3-DS",
-    "name": "AC-06-S3-DS",
-    "url": "/models/RitenBhaiModelling/AC-06-S3-DS.glb"
+    "id": "AC-12-90-M30-4",
+    "name": "AC-12-90-M30-4",
+    "url": "/models/ClientModel/AC-12-90-M30-4.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AC-12-M3-90-M22",
+    "name": "AC-12-M3-90-M22",
+    "url": "/models/ClientModel/AC-12-M3-90-M22.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AC-16-0050-00",
+    "name": "AC-16-0050-00",
+    "url": "/models/ClientModel/AC-16-0050-00.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AC-16-30-WF-DS",
+    "name": "AC-16-30-WF-DS",
+    "url": "/models/ClientModel/AC-16-30-WF-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AR-06-45-M14",
+    "name": "AR-06-45-M14",
+    "url": "/models/ClientModel/AR-06-45-M14.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AR-06-BJ-01",
+    "name": "AR-06-BJ-01",
+    "url": "/models/ClientModel/AR-06-BJ-01.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AR-08-G3",
+    "name": "AR-08-G3",
+    "url": "/models/ClientModel/AR-08-G3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AR-08-P3-DS",
+    "name": "AR-08-P3-DS",
+    "url": "/models/ClientModel/AR-08-P3-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AR-10-45-BSP",
+    "name": "AR-10-45-BSP",
+    "url": "/models/ClientModel/AR-10-45-BSP.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-24-30JIC-3",
+    "name": "PL-24-30JIC-3",
+    "url": "/models/ClientModel/PL-24-30JIC-3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-24-60-WF",
+    "name": "PL-24-60-WF",
+    "url": "/models/ClientModel/PL-24-60-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-24-G3-DS",
+    "name": "PL-24-G3-DS",
+    "url": "/models/ClientModel/PL-24-G3-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-24-ST-WF",
+    "name": "PL-24-ST-WF",
+    "url": "/models/ClientModel/PL-24-ST-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-28-0006-60",
+    "name": "PL-28-0006-60",
+    "url": "/models/ClientModel/PL-28-0006-60.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-28-ST-WFFD",
+    "name": "PL-28-ST-WFFD",
+    "url": "/models/ClientModel/PL-28-ST-WFFD.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-32-0009",
+    "name": "PL-32-0009",
+    "url": "/models/ClientModel/PL-32-0009.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Blue",
+          "Pipe": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "NutHead": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Nut": "Black",
+          "NutHead": "Black",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
   }
 ]
