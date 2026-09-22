@@ -4,7 +4,7 @@ import { useMainContext } from "../../context/MainContext";
 import { DialogueBox } from "./DialogueBox";
 
 const WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbwJLhckcZcveIiRxTecnO6jTGewsGFE8VTO0k8szTVcBT2h2vLfVcjRpeE6nDMHvo1e/exec";
+  "https://script.google.com/macros/s/AKfycbyTDq42voKquASHzVLQm4txCPmwfrLXwn5oEkzkirwcW4aGDFTcyUoJ12ENbiJPWKAj/exec";
 
 export const FeedbackButtons = observer(() => {
   const stateManager = useMainContext();
@@ -12,18 +12,28 @@ export const FeedbackButtons = observer(() => {
 
   const [isDialogueOpen, setIsDialogueOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isCheckingStatus, setIsCheckingStatus] = useState(true);
+  
+  // Initialize as empty so it always asks the live Google Sheet
   const [approvedModels, setApprovedModels] = useState<Set<string>>(new Set());
 
-  // Fetch approved models on mount
+  // Fetch live approved models on mount to keep synced
   useEffect(() => {
     fetch(WEBHOOK_URL)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error("Google Script returned " + res.status);
+        return res.json();
+      })
       .then((data) => {
         if (data.approvedModels) {
-          setApprovedModels(new Set(data.approvedModels));
+          const liveSet = new Set<string>(data.approvedModels);
+          setApprovedModels(liveSet);
         }
       })
-      .catch(console.error);
+      .catch((err) => {
+        console.error("Live Sync Failed. Is your Webhook URL correct and deployed?", err);
+      })
+      .finally(() => setIsCheckingStatus(false));
   }, []);
 
   const currentModelName = sideBarManager.selectedModel?.name;
@@ -89,14 +99,20 @@ export const FeedbackButtons = observer(() => {
       <div className="flex gap-4">
         <button
           onClick={handleApprove}
-          disabled={hasApproved}
+          disabled={hasApproved || isCheckingStatus}
           className={`${
             hasApproved
               ? "bg-gray-500 cursor-not-allowed"
+              : isCheckingStatus
+              ? "bg-gray-400 cursor-wait"
               : "bg-green-600 hover:bg-green-700"
           } text-white font-semibold py-2 px-4 rounded-md shadow-lg transition-colors`}
         >
-          {hasApproved ? "✓ Approved" : "Approve"}
+          {isCheckingStatus && !hasApproved
+            ? "Checking..."
+            : hasApproved
+            ? "✓ Approved"
+            : "Approve"}
         </button>
         <button
           onClick={() => setIsDialogueOpen(true)}
