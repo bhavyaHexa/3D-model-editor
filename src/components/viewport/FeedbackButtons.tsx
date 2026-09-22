@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { useMainContext } from "../../context/MainContext";
 import { DialogueBox } from "./DialogueBox";
+import { message } from "antd";
 
 const WEBHOOK_URL =
   "https://script.google.com/macros/s/AKfycbwJLhckcZcveIiRxTecnO6jTGewsGFE8VTO0k8szTVcBT2h2vLfVcjRpeE6nDMHvo1e/exec";
@@ -31,7 +32,8 @@ export const FeedbackButtons = observer(() => {
         }
       })
       .catch((err) => {
-        console.error("Live Sync Failed. Is your Webhook URL correct and deployed?", err);
+        console.error(err);
+        message.error("Live Sync Failed. Is your Webhook URL correct and deployed?");
       })
       .finally(() => setIsCheckingStatus(false));
   }, []);
@@ -90,7 +92,7 @@ export const FeedbackButtons = observer(() => {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsDialogueOpen(false);
-      alert("Feedback sent successfully!");
+      message.success("Feedback sent successfully!");
     }, 500);
   };
 

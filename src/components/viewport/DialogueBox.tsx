@@ -29,7 +29,7 @@ export const DialogueBox: React.FC<DialogueBoxProps> = ({
       <h2 className="text-lg font-bold mb-3">Provide Feedback</h2>
       <textarea
         className="w-full h-24 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none mb-3 text-sm"
-        placeholder="comment your feedback"
+        placeholder="Comment your Feedback"
         value={feedbackText}
         onChange={(e) => setFeedbackText(e.target.value)}
       />
