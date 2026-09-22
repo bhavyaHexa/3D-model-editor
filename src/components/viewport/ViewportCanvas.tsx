@@ -25,8 +25,8 @@ export const ViewportCanvas = observer(() => {
     <div className="flex-1 h-full bg-blueprint-grid relative">
       <FeedbackButtons />
       {sideBarManager.selectedModel?.name && (
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
-          <h2 className="text-black-200 font-bold text-2xl tracking-wide">
+        <div className="absolute bottom-6 md:top-6 md:bottom-auto left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+          <h2 className="text-gray-800 font-bold text-xl md:text-2xl tracking-wide">
             {sideBarManager.selectedModel.name}
           </h2>
         </div>

@@ -41,7 +41,7 @@ export const CrimpDropdown = observer(() => {
       </button>
 
       {isCrimpDropdownOpen && (
-        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto">
+        <div className="absolute z-10 w-full bottom-full mb-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto">
           {availableCrimpColors.map((color) => {
             const isRecommended = recommendedCrimpColor?.id === color.id;
             return (
