@@ -52,7 +52,7 @@ export const ViewportCanvas = observer(() => {
           </Suspense>
         )}
 
-        <OrbitControls makeDefault minDistance={5} maxDistance={10} />
+        <OrbitControls makeDefault minDistance={5} maxDistance={10} enablePan={false} />
       </Canvas>
     </div>
   );
