@@ -1,4 +1,5 @@
 import { observer } from "mobx-react-lite";
+import { useEffect, useRef } from "react";
 import { useMainContext } from "../../context/MainContext";
 import { MaterialDropdown } from "./Material";
 import { CrimpDropdown } from "./CrimpDropdown";
@@ -22,6 +23,14 @@ export const ModelSidebar = observer(() => {
     isCrimpDropdownOpen,
     closeCrimpDropdown
   } = sideBarManager;
+
+  const selectedRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (isDropdownOpen && selectedRef.current) {
+      selectedRef.current.scrollIntoView({ block: "nearest" });
+    }
+  }, [isDropdownOpen]);
 
   return (
     <aside
@@ -56,6 +65,7 @@ export const ModelSidebar = observer(() => {
             {modelFiles.map((model) => (
               <button
                 key={model.id}
+                ref={selectedModel?.id === model.id ? selectedRef : null}
                 className={`w-full text-left px-3 py-2 text-xs transition-colors hover:bg-blue-50 ${
                   selectedModel?.id === model.id
                     ? "bg-blue-100 font-medium text-blue-900"
