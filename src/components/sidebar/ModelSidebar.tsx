@@ -34,7 +34,7 @@ export const ModelSidebar = observer(() => {
 
   return (
     <aside
-      className="w-64 bg-gray-100 border-r border-gray-300 flex flex-col p-4"
+      className="w-64 bg-gray-100 border-r border-gray-300 flex-col p-4 hidden md:flex"
       onClick={() => {
         if (isDropdownOpen) closeDropdown();
         if (isMaterialDropdownOpen) closeMaterialDropdown();
