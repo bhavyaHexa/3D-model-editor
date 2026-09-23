@@ -32,7 +32,7 @@ export const ViewportCanvas = observer(() => {
         </div>
       )}
       <Canvas
-        camera={{ position: [0, 2, 7.5], fov: 45, near: 0.001, far: 1000 }}
+        camera={{ position: [0, 2, 7.5], fov: 45, near: 0.1, far: 15 }}
         shadows
         gl={{
           toneMapping: THREE.ACESFilmicToneMapping,
