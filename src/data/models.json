@@ -778,5 +778,603 @@
         }
       }
     ]
+  },
+  {
+    "id": "BJB-03-1-7S",
+    "name": "BJB-03-1-7S",
+    "url": "/models/SB&PROBlack Models/BJB-03-1-7S.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Bolt" : "Stainless Steel"
+        }
+      },
+       {
+        "id": 2,
+        "name": "Plated Steel",
+        "materialMap": {
+          "Bolt" : "Plated Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "BJBD-03-1-7",
+    "name": "BJBD-03-1-7",
+    "url": "/models/SB&PROBlack Models/BJBD-03-1-7.glb",
+    "colorCombination": [
+        {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Bolt" : "Stainless Steel"
+        }
+      },
+       {
+        "id": 2,
+        "name": "Plated Steel",
+        "materialMap": {
+          "Bolt" : "Plated Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DR-08-M4-120",
+    "name": "DR-08-M4-120",
+    "url": "/models/SB&PROBlack Models/DR-08-M4-120.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum Black",
+        "materialMap": {
+          "Nut": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DR-12-P4",
+    "name": "DR-12-P4",
+    "url": "/models/SB&PROBlack Models/DR-12-P4.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum Black",
+        "materialMap": {
+          "Nut": "Black",
+          "Crimp": "Black",
+          "Pipe": "Black"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DR-A-0001",
+    "name": "DR-A-0001",
+    "url": "/models/SB&PROBlack Models/DR-A-0001.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum Black",
+        "materialMap": {
+          "Nut": "Black",
+          "Pipe": "Black"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DR-A-J08-K10",
+    "name": "DR-A-J08-K10",
+    "url": "/models/SB&PROBlack Models/DR-A-J08-K10.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum Black",
+        "materialMap": {
+          "Nut": "Black",
+          "Pipe": "Black"
+        }
+      }
+    ]
+  },
+  {
+    "id": "HPSB-04-0003",
+    "name": "HPSB-04-0003",
+    "url": "/models/SB&PROBlack Models/HPSB-04-0003.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "HPSB-04-60-M14",
+    "name": "HPSB-04-60-M14",
+    "url": "/models/SB&PROBlack Models/HPSB-04-60-M14.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Crimp": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "HPSB-04-G7",
+    "name": "HPSB-04-G7",
+    "url": "/models/SB&PROBlack Models/HPSB-04-G7.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Crimp": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+   {
+    "id": "HPSB-04-M7-110",
+    "name": "HPSB-04-M7-110",
+    "url": "/models/SB&PROBlack Models/HPSB-04-M7-110.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Crimp": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-02-03-B-G7",
+    "name": "SB-02-03-B-G7",
+    "url": "/models/SB&PROBlack Models/SB-02-03-B-G7.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "Block": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-02-T7",
+    "name": "SB-02-T7",
+    "url": "/models/SB&PROBlack Models/SB-02-T7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-03-0033-7",
+    "name": "SB-03-0033-7",
+    "url": "/models/SB&PROBlack Models/SB-03-0033-7.glb",
+    "colorCombination": [
+    {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-03-0041-7",
+    "name": "SB-03-0041-7",
+    "url": "/models/SB&PROBlack Models/SB-03-0041-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Bolt" : "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-03-0072-4",
+    "name": "SB-03-0072-4",
+    "url": "/models/SB&PROBlack Models/SB-03-0072-4.glb",
+    "colorCombination": [
+       {
+        "id": 1,
+        "name": "Black",
+        "materialMap": {
+          "Pipe": "Black",
+          "Nut" : "Black",
+          "Crimp": "Black"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-03-BJ-E45-7",
+    "name": "SB-03-BJ-E45-7",
+    "url": "/models/SB&PROBlack Models/SB-03-BJ-E45-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+   {
+    "id": "SB-03-BJ-M10-7",
+    "name": "SB-03-BJ-M10-7",
+    "url": "/models/SB&PROBlack Models/SB-03-BJ-M10-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      },
+       {
+        "id": 2,
+        "name": "Blue",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Crimp": "Blue"
+        }
+      }
+    ]
+  },
+    {
+    "id": "SB-03-BJ-SB25-7",
+    "name": "SB-03-BJ-SB25-7",
+    "url": "/models/SB&PROBlack Models/SB-03-BJ-SB25-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+      {
+    "id": "SB-03-BJT-M10-7",
+    "name": "SB-03-BJT-M10-7",
+    "url": "/models/SB&PROBlack Models/SB-03-BJT-M10-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+      {
+    "id": "SB-03DBJ90M10-7",
+    "name": "SB-03DBJ90M10-7",
+    "url": "/models/SB&PROBlack Models/SB-03DBJ90M10-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+   {
+    "id": "SB-03-DBJ-M10-7",
+    "name": "SB-03-DBJ-M10-7",
+    "url": "/models/SB&PROBlack Models/SB-03-DBJ-M10-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-03-J7-45",
+    "name": "SB-03-J7-45",
+    "url": "/models/SB&PROBlack Models/SB-03-J7-45.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+   {
+    "id": "SB-04-0001-7",
+    "name": "SB-04-0001-7",
+    "url": "/models/SB&PROBlack Models/SB-04-0001-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+   {
+    "id": "SB-04-0007-3",
+    "name": "SB-04-0007-3",
+    "url": "/models/SB&PROBlack Models/SB-04-0007-3.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Blue",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Nut": "Blue",
+          "Crimp": "Blue"
+        }
+      }
+    ]
+  },
+    {
+    "id": "SB-04-0012-3",
+    "name": "SB-04-0012-3",
+    "url": "/models/SB&PROBlack Models/SB-04-0012-3.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Bolt": "Blue",
+          "Crimp": "Blue"
+        }
+      }
+    ]
+  },
+    {
+    "id": "SB-04-0016-90-3",
+    "name": "SB-04-0016-90-3",
+    "url": "/models/SB&PROBlack Models/SB-04-0016-90-3.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Nut": "Blue",
+          "Crimp": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+    {
+    "id": "SB-04-0034-7",
+    "name": "SB-04-0034-7",
+    "url": "/models/SB&PROBlack Models/SB-04-0034-7.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Nut": "Blue",
+          "Crimp": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+   {
+    "id": "SB-04-0045-3",
+    "name": "SB-04-0045-3",
+    "url": "/models/SB&PROBlack Models/SB-04-0045-3.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Bolt": "Blue",
+          "Crimp": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Pipe": "Black",
+          "Bolt": "Black",
+          "Crimp": "Black"
+        }
+      }
+    ]
+  },
+    {
+    "id": "SB-04-0046-3",
+    "name": "SB-04-0046-3",
+    "url": "/models/SB&PROBlack Models/SB-04-0046-3.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Blue",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Bolt": "Blue",
+          "Crimp": "Blue"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Black",
+        "materialMap": {
+          "Pipe": "Black",
+          "Bolt": "Black",
+          "Crimp": "Black"
+        }
+      }
+    ]
+  },
+    {
+    "id": "SB-04-90-M12",
+    "name": "SB-04-90-M12",
+    "url": "/models/SB&PROBlack Models/SB-04-90-M12.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-04-F7-3",
+    "name": "SB-04-F7-3",
+    "url": "/models/SB&PROBlack Models/SB-04-F7-3.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      },   {
+        "id": 2,
+        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "materialMap": {
+          "Pipe": "Black",
+          "Nut": "Black",
+          "Crimp": "Stainless Steel"
+        }
+      },   {
+        "id": 3,
+        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "materialMap": {
+          "Pipe": "Blue",
+          "Nut": "Blue",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SB-04-M7-45-M10",
+    "name": "SB-04-M7-45-M10",
+    "url": "/models/SB&PROBlack Models/SB-04-M7-45-M10.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
+  },
+   {
+    "id": "SB-04-V7-90",
+    "name": "SB-04-V7-90",
+    "url": "/models/SB&PROBlack Models/SB-04-V7-90.glb",
+    "colorCombination": [
+     {
+        "id": 1,
+        "name": "Stainless Steel",
+        "materialMap": {
+          "Pipe": "Stainless Steel",
+          "Nut": "Stainless Steel",
+          "Crimp": "Stainless Steel"
+        }
+      }
+    ]
   }
 ]

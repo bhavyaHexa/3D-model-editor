@@ -23,6 +23,12 @@
       "id": "gold",
       "name": "Gold",
       "colorCode": "#e69f05"
+    },
+    {
+      "id": "plated",
+      "name": "Plated Steel",
+      "materialURL": "/materials/Plated_Steel.glb",
+      "colorCode": "#8C8F5B"
     }
   ]
 }
