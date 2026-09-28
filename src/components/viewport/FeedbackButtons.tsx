@@ -97,8 +97,8 @@ export const FeedbackButtons = observer(() => {
   };
 
   return (
-    <div className="relative flex flex-row gap-2 justify-center items-center w-full pb-2">
-      <div className="flex flex-row gap-2 md:gap-4 justify-center items-center w-full">
+    <div className="relative flex flex-col gap-2 md:gap-0 justify-center items-center w-full md:w-max pb-2">
+      <div className="flex flex-row gap-2 md:gap-4 justify-center items-center w-full md:w-max">
         {/* APPROVE BUTTON */}
         <button
           onClick={handleApprove}
@@ -142,7 +142,7 @@ export const FeedbackButtons = observer(() => {
         </button>
       </div>
 
-      <div className="absolute z-50 md:bottom-0 md:top-auto md:left-full md:ml-4 bottom-full left-1/2 -translate-x-1/2 md:translate-x-0 mb-4 md:mb-0 min-w-[300px]">
+      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 md:bottom-0 md:top-auto md:left-full md:ml-4 md:translate-x-0 md:mb-0 flex justify-center z-50">
         <DialogueBox
           isOpen={isDialogueOpen}
           onClose={() => setIsDialogueOpen(false)}
