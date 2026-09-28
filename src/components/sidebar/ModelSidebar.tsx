@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { useMainContext } from "../../context/MainContext";
 import { MaterialDropdown } from "./Material";
 import { CrimpDropdown } from "./CrimpDropdown";
+import { CategoryDropdown } from "./CategoryDropdown";
 
 export const ModelSidebar = observer(() => {
   const stateManager = useMainContext();
@@ -12,7 +13,7 @@ export const ModelSidebar = observer(() => {
   const hasCrimpMesh = modelLoadManager.meshes.some(mesh => mesh.name === "Crimp");
 
   const {
-    modelFiles,
+    filteredModelFiles,
     selectedModel,
     setSelectedModel,
     isDropdownOpen,
@@ -39,11 +40,14 @@ export const ModelSidebar = observer(() => {
         if (isDropdownOpen) closeDropdown();
         if (isMaterialDropdownOpen) closeMaterialDropdown();
         if (isCrimpDropdownOpen) closeCrimpDropdown();
+        if (stateManager.designManager.sideBarManager.isCategoryDropdownOpen) stateManager.designManager.sideBarManager.closeCategoryDropdown();
       }}
     >
       <h2 className="text-gray-800 font-semibold text-sm mb-3">
         Model Explorer
       </h2>
+
+      <CategoryDropdown />
 
       <div className="mb-4 relative" onClick={(e) => e.stopPropagation()}>
         <label className="block text-xs font-medium text-gray-700 mb-1">
@@ -62,7 +66,7 @@ export const ModelSidebar = observer(() => {
 
         {isDropdownOpen && (
           <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto">
-            {modelFiles.map((model) => (
+            {filteredModelFiles.map((model) => (
               <button
                 key={model.id}
                 ref={selectedModel?.id === model.id ? selectedRef : null}

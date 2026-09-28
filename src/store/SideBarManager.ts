@@ -11,6 +11,10 @@ export class SideBarManager {
   loadKey: number = 0;
   isDropdownOpen: boolean = false;
 
+  selectedCategory: string = "PROGold Fittings";
+  categories: string[] = ["PROGold Fittings", "PROBlack DR Fittings", "Smooth Bore Fittings"];
+  isCategoryDropdownOpen: boolean = false;
+
   materials: ColorCombination[] = [];
   selectedMaterial: ColorCombination | null = null;
   isMaterialDropdownOpen: boolean = false;
@@ -31,14 +35,43 @@ export class SideBarManager {
 
   initModels() {
     this.modelFiles = predefinedModels as ModelFile[];
-    if (this.modelFiles.length > 0) {
-      this.setSelectedModel(this.modelFiles[0]);
+    if (this.filteredModelFiles.length > 0) {
+      this.setSelectedModel(this.filteredModelFiles[0]);
     }
     
     this.crimpColors = crimpColorsData.crimpColors as CrimpColor[];
     if (this.crimpColors.length > 0) {
       this.selectedCrimpColor = this.crimpColors[0];
     }
+  }
+
+  get filteredModelFiles() {
+    // @ts-ignore
+    return this.modelFiles.filter(m => m.category === this.selectedCategory);
+  }
+
+  setSelectedCategory(category: string) {
+    this.selectedCategory = category;
+    this.isCategoryDropdownOpen = false;
+    
+    if (this.filteredModelFiles.length > 0) {
+      this.setSelectedModel(this.filteredModelFiles[0]);
+    } else {
+      this.setSelectedModel(null);
+    }
+  }
+
+  toggleCategoryDropdown() {
+    this.isCategoryDropdownOpen = !this.isCategoryDropdownOpen;
+    if (this.isCategoryDropdownOpen) {
+      this.isDropdownOpen = false;
+      this.isMaterialDropdownOpen = false;
+      this.isCrimpDropdownOpen = false;
+    }
+  }
+
+  closeCategoryDropdown() {
+    this.isCategoryDropdownOpen = false;
   }
 
   setSelectedModel(model: ModelFile | null) {
@@ -64,6 +97,7 @@ export class SideBarManager {
     if (this.isDropdownOpen) {
       this.isMaterialDropdownOpen = false;
       this.isCrimpDropdownOpen = false;
+      this.isCategoryDropdownOpen = false;
     }
   }
 
@@ -100,6 +134,7 @@ export class SideBarManager {
     if (this.isMaterialDropdownOpen) {
       this.isDropdownOpen = false;
       this.isCrimpDropdownOpen = false;
+      this.isCategoryDropdownOpen = false;
     }
   }
 
@@ -117,6 +152,7 @@ export class SideBarManager {
     if (this.isCrimpDropdownOpen) {
       this.isDropdownOpen = false;
       this.isMaterialDropdownOpen = false;
+      this.isCategoryDropdownOpen = false;
     }
   }
 

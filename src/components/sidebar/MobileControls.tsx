@@ -4,6 +4,7 @@ import { useMainContext } from "../../context/MainContext";
 import { MaterialDropdown } from "./Material";
 import { CrimpDropdown } from "./CrimpDropdown";
 import { FeedbackButtons } from "../viewport/FeedbackButtons";
+import { CategoryDropdown } from "./CategoryDropdown";
 
 export const MobileControls = observer(() => {
   const stateManager = useMainContext();
@@ -13,7 +14,7 @@ export const MobileControls = observer(() => {
   const hasCrimpMesh = modelLoadManager.meshes.some(mesh => mesh.name === "Crimp");
 
   const {
-    modelFiles,
+    filteredModelFiles,
     selectedModel,
     setSelectedModel,
     isDropdownOpen,
@@ -42,9 +43,16 @@ export const MobileControls = observer(() => {
   return (
     <div 
       className="md:hidden w-full h-[50vh] bg-white border-t border-gray-200 overflow-y-auto"
-      onClick={() => closeAllDropdowns()}
+      onClick={() => {
+        closeAllDropdowns();
+        if (stateManager.designManager.sideBarManager.isCategoryDropdownOpen) {
+          stateManager.designManager.sideBarManager.closeCategoryDropdown();
+        }
+      }}
     >
       <div className="p-4 flex flex-col gap-4">
+        <CategoryDropdown />
+        
         {/* Select Model Dropdown */}
         <div className="relative" onClick={(e) => e.stopPropagation()}>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -62,7 +70,7 @@ export const MobileControls = observer(() => {
 
           {isDropdownOpen && (
             <div className="absolute z-10 w-full top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-xl max-h-60 overflow-auto">
-              {modelFiles.map((model) => (
+              {filteredModelFiles.map((model) => (
                 <button
                   key={model.id}
                   ref={selectedModel?.id === model.id ? selectedRef : null}
