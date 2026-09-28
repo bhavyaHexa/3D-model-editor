@@ -14,34 +14,29 @@ export const FeedbackButtons = observer(() => {
   const [isDialogueOpen, setIsDialogueOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isCheckingStatus, setIsCheckingStatus] = useState(true);
-  
-  // Initialize as empty so it always asks the live Google Sheet
-  const [approvedModels, setApprovedModels] = useState<Set<string>>(new Set());
 
-  // Fetch live approved models on mount to keep synced
+  // Fetch live sync on mount
   useEffect(() => {
     fetch(WEBHOOK_URL)
-      .then((res) => {
-        if (!res.ok) throw new Error("Google Script returned " + res.status);
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
-        if (data.approvedModels) {
-          const liveSet = new Set<string>(data.approvedModels);
-          setApprovedModels(liveSet);
-        }
+        sideBarManager.setInitialFeedbackState(
+          data.approvedModels || [], 
+          data.rejectedModels || []
+        );
       })
       .catch((err) => {
         console.error(err);
         message.error("Live Sync Failed. Is your Webhook URL correct and deployed?");
       })
       .finally(() => setIsCheckingStatus(false));
-  }, []);
+  }, [sideBarManager]);
 
   const currentModelName = sideBarManager.selectedModel?.name;
-  const hasApproved = currentModelName
-    ? approvedModels.has(currentModelName)
-    : false;
+  
+  // Read from MobX Store
+  const hasApproved = currentModelName ? sideBarManager.approvedModels.has(currentModelName) : false;
+  const hasRejected = currentModelName ? sideBarManager.rejectedModels.has(currentModelName) : false;
 
   // Helper to extract the current state data
   const getPayload = (status: string, feedback: string = "") => {
@@ -71,22 +66,22 @@ export const FeedbackButtons = observer(() => {
   };
 
   const handleApprove = () => {
-    const payload = getPayload("Approved");
-    submitData(payload);
-
     if (currentModelName) {
-      setApprovedModels((prev) => {
-        const next = new Set(prev);
-        next.add(currentModelName);
-        return next;
-      });
+      sideBarManager.approveModel(currentModelName);
+      submitData(getPayload("Approved"));
+    }
+  };
+
+  const handleReject = () => {
+    if (currentModelName) {
+      sideBarManager.rejectModel(currentModelName);
+      submitData(getPayload("Rejected"));
     }
   };
 
   const handleFeedbackSubmit = (feedbackText: string) => {
     setIsSubmitting(true);
-    const payload = getPayload("Feedback", feedbackText);
-    submitData(payload);
+    submitData(getPayload("Feedback", feedbackText));
 
     // Simulate a short delay so the user feels the submission happened
     setTimeout(() => {
@@ -97,35 +92,49 @@ export const FeedbackButtons = observer(() => {
   };
 
   return (
-    <div className="absolute top-4 right-4 z-50 flex flex-col items-end">
+    <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
       <div className="flex gap-4">
+        {/* APPROVE BUTTON */}
         <button
           onClick={handleApprove}
-          disabled={hasApproved || isCheckingStatus}
-          className={`${
-            hasApproved
-              ? "bg-gray-500 cursor-not-allowed"
-              : isCheckingStatus
-              ? "bg-gray-400 cursor-wait"
-              : "bg-green-600 hover:bg-green-700"
-          } text-white font-semibold py-2 px-4 rounded-md shadow-lg transition-colors`}
+          disabled={isCheckingStatus}
+          className={`rounded-[20px] px-5 py-2 flex items-center gap-2 text-white text-sm font-semibold shadow-md transition-all duration-300 ${
+            hasApproved 
+              ? "bg-[#2e7d32] shadow-inner scale-[1.02]" 
+              : hasRejected 
+                ? "bg-gray-400 opacity-80 hover:bg-[#43a047] hover:opacity-100" 
+                : "bg-[#4caf50] hover:bg-[#43a047]" 
+          } disabled:opacity-50`}
         >
-          {isCheckingStatus && !hasApproved
-            ? "Checking..."
-            : hasApproved
-            ? "✓ Approved"
-            : "Approve"}
+          <span className="text-lg leading-none mt-[-2px]">✓</span> {hasApproved ? "APPROVED" : "APPROVE MODEL"}
         </button>
+
+        {/* REJECT BUTTON */}
+        <button
+          onClick={handleReject}
+          disabled={isCheckingStatus}
+          className={`rounded-[20px] px-5 py-2 flex items-center gap-2 text-white text-sm font-semibold shadow-md transition-all duration-300 ${
+            hasRejected 
+              ? "bg-[#c62828] shadow-inner scale-[1.02]" 
+              : hasApproved 
+                ? "bg-gray-400 opacity-80 hover:bg-[#e53935] hover:opacity-100" 
+                : "bg-[#ef5350] hover:bg-[#e53935]" 
+          } disabled:opacity-50`}
+        >
+          <span className="text-lg leading-none mt-[-2px]">✕</span> {hasRejected ? "REJECTED" : "REJECT MODEL"}
+        </button>
+
+        {/* FEEDBACK BUTTON */}
         <button
           onClick={() => setIsDialogueOpen(true)}
           disabled={isSubmitting}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-lg transition-colors disabled:opacity-50"
+          className="rounded-[20px] px-5 py-2 flex items-center gap-2 text-white text-sm font-semibold shadow-lg bg-gray-500 hover:bg-gray-600 transition-colors disabled:opacity-50"
         >
-          Feedback
+          <span className="text-lg leading-none mt-[-2px]">💬</span> ADD FEEDBACK
         </button>
       </div>
 
-      <div className="relative mt-2 w-full flex justify-end">
+      <div className="relative mt-2 w-full flex justify-center">
         <DialogueBox
           isOpen={isDialogueOpen}
           onClose={() => setIsDialogueOpen(false)}

@@ -19,6 +19,9 @@ export class SideBarManager {
   selectedCrimpColor: CrimpColor | null = null;
   isCrimpDropdownOpen: boolean = false;
 
+  approvedModels: Set<string> = new Set();
+  rejectedModels: Set<string> = new Set();
+
   constructor() {
     makeAutoObservable(this, {}, { autoBind: true });
     this.initModels();
@@ -119,5 +122,20 @@ export class SideBarManager {
 
   closeCrimpDropdown() {
     this.isCrimpDropdownOpen = false;
+  }
+
+  setInitialFeedbackState(approved: string[], rejected: string[]) {
+    this.approvedModels = new Set(approved);
+    this.rejectedModels = new Set(rejected);
+  }
+
+  approveModel(modelName: string) {
+    this.approvedModels.add(modelName);
+    this.rejectedModels.delete(modelName);
+  }
+
+  rejectModel(modelName: string) {
+    this.rejectedModels.add(modelName);
+    this.approvedModels.delete(modelName);
   }
 }
