@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import { useMainContext } from "../../context/MainContext";
 import { MaterialDropdown } from "./Material";
 import { CrimpDropdown } from "./CrimpDropdown";
+import { FeedbackButtons } from "../viewport/FeedbackButtons";
 
 export const MobileControls = observer(() => {
   const stateManager = useMainContext();
@@ -40,7 +41,7 @@ export const MobileControls = observer(() => {
 
   return (
     <div 
-      className="md:hidden w-full h-[40vh] bg-white border-t border-gray-200 overflow-y-auto"
+      className="md:hidden w-full h-[50vh] bg-white border-t border-gray-200 overflow-y-auto"
       onClick={() => closeAllDropdowns()}
     >
       <div className="p-4 flex flex-col gap-4">
@@ -84,6 +85,9 @@ export const MobileControls = observer(() => {
 
         <MaterialDropdown />
         {hasCrimpMesh && <CrimpDropdown />}
+        <div className="mt-2 pb-4">
+          <FeedbackButtons />
+        </div>
       </div>
     </div>
   );

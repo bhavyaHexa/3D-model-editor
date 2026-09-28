@@ -14,7 +14,6 @@ export const FeedbackButtons = observer(() => {
   const [isDialogueOpen, setIsDialogueOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isCheckingStatus, setIsCheckingStatus] = useState(true);
-
   // Fetch live sync on mount
   useEffect(() => {
     fetch(WEBHOOK_URL)
@@ -92,13 +91,13 @@ export const FeedbackButtons = observer(() => {
   };
 
   return (
-    <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
-      <div className="flex gap-4">
+    <div className="relative flex flex-row gap-2 justify-center items-center w-full">
+      <div className="flex flex-row gap-2 md:gap-4 justify-center items-center w-full">
         {/* APPROVE BUTTON */}
         <button
           onClick={handleApprove}
           disabled={isCheckingStatus}
-          className={`rounded-[20px] px-5 py-2 flex items-center gap-2 text-white text-sm font-semibold shadow-md transition-all duration-300 ${
+          className={`rounded-[20px] px-3 py-1.5 md:px-5 md:py-2 flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm font-semibold shadow-md transition-all duration-300 ${
             hasApproved 
               ? "bg-[#2e7d32] shadow-inner scale-[1.02]" 
               : hasRejected 
@@ -106,14 +105,14 @@ export const FeedbackButtons = observer(() => {
                 : "bg-[#4caf50] hover:bg-[#43a047]" 
           } disabled:opacity-50`}
         >
-          <span className="text-lg leading-none mt-[-2px]">✓</span> {hasApproved ? "APPROVED" : "APPROVE MODEL"}
+          <span className="text-sm md:text-lg leading-none mt-[-2px]">✓</span> {hasApproved ? "APPROVED" : "APPROVE"}
         </button>
 
         {/* REJECT BUTTON */}
         <button
           onClick={handleReject}
           disabled={isCheckingStatus}
-          className={`rounded-[20px] px-5 py-2 flex items-center gap-2 text-white text-sm font-semibold shadow-md transition-all duration-300 ${
+          className={`rounded-[20px] px-3 py-1.5 md:px-5 md:py-2 flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm font-semibold shadow-md transition-all duration-300 ${
             hasRejected 
               ? "bg-[#c62828] shadow-inner scale-[1.02]" 
               : hasApproved 
@@ -121,20 +120,20 @@ export const FeedbackButtons = observer(() => {
                 : "bg-[#ef5350] hover:bg-[#e53935]" 
           } disabled:opacity-50`}
         >
-          <span className="text-lg leading-none mt-[-2px]">✕</span> {hasRejected ? "REJECTED" : "REJECT MODEL"}
+          <span className="text-sm md:text-lg leading-none mt-[-2px]">✕</span> {hasRejected ? "REJECTED" : "REJECT"}
         </button>
 
         {/* FEEDBACK BUTTON */}
         <button
           onClick={() => setIsDialogueOpen(true)}
           disabled={isSubmitting}
-          className="rounded-[20px] px-5 py-2 flex items-center gap-2 text-white text-sm font-semibold shadow-lg bg-gray-500 hover:bg-gray-600 transition-colors disabled:opacity-50"
+          className="rounded-[20px] px-3 py-1.5 md:px-5 md:py-2 flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm font-semibold shadow-lg bg-gray-500 hover:bg-gray-600 transition-colors disabled:opacity-50"
         >
-          <span className="text-lg leading-none mt-[-2px]">💬</span> ADD FEEDBACK
+          <span className="text-sm md:text-lg leading-none mt-[-2px]">💬</span> FEEDBACK
         </button>
       </div>
 
-      <div className="relative mt-2 w-full flex justify-center">
+      <div className="absolute z-50 md:bottom-0 md:top-auto md:left-full md:ml-4 bottom-full left-1/2 -translate-x-1/2 md:translate-x-0 mb-4 md:mb-0 min-w-[300px]">
         <DialogueBox
           isOpen={isDialogueOpen}
           onClose={() => setIsDialogueOpen(false)}

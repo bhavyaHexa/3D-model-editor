@@ -11,7 +11,7 @@ export default function App() {
         <Header />
         <div className="flex flex-col md:flex-row flex-1 overflow-hidden relative">
           <ModelSidebar />
-          <div className="h-[60vh] md:h-full md:flex-1 relative">
+          <div className="h-[50vh] md:h-full md:flex-1 relative">
             <ViewportCanvas />
           </div>
           <MobileControls />
