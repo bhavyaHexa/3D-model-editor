@@ -111,7 +111,7 @@ export const FeedbackButtons = observer(() => {
                 : "bg-[#4caf50] hover:bg-[#43a047]"
           } disabled:opacity-50`}
         >
-          <span className="text-sm md:text-lg leading-none mt-[-2px]">✓</span>{" "}
+          <span className="text-sm md:text-lg leading-none mt-[-2px]"></span>{" "}
           {hasApproved ? "APPROVED" : "APPROVE"}
         </button>
 
@@ -127,7 +127,7 @@ export const FeedbackButtons = observer(() => {
                 : "bg-[#ef5350] hover:bg-[#e53935]"
           } disabled:opacity-50`}
         >
-          <span className="text-sm md:text-lg leading-none mt-[-2px]">✕</span>{" "}
+          <span className="text-sm md:text-lg leading-none mt-[-2px]"></span>{" "}
           {hasRejected ? "REJECTED" : "REJECT"}
         </button>
 
@@ -137,7 +137,7 @@ export const FeedbackButtons = observer(() => {
           disabled={isSubmitting}
           className="rounded-[20px] px-3 py-1.5 md:px-5 md:py-2 flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm font-semibold shadow-lg bg-gray-500 hover:bg-gray-600 transition-colors disabled:opacity-50"
         >
-          <span className="text-sm md:text-lg leading-none mt-[-2px]">💬</span>{" "}
+          <span className="text-sm md:text-lg leading-none mt-[-2px]"></span>{" "}
           FEEDBACK
         </button>
       </div>
