@@ -20,22 +20,28 @@ export const FeedbackButtons = observer(() => {
       .then((res) => res.json())
       .then((data) => {
         sideBarManager.setInitialFeedbackState(
-          data.approvedModels || [], 
-          data.rejectedModels || []
+          data.approvedModels || [],
+          data.rejectedModels || [],
         );
       })
       .catch((err) => {
         console.error(err);
-        message.error("Live Sync Failed. Is your Webhook URL correct and deployed?");
+        message.error(
+          "Live Sync Failed. Is your Webhook URL correct and deployed?",
+        );
       })
       .finally(() => setIsCheckingStatus(false));
   }, [sideBarManager]);
 
   const currentModelName = sideBarManager.selectedModel?.name;
-  
+
   // Read from MobX Store
-  const hasApproved = currentModelName ? sideBarManager.approvedModels.has(currentModelName) : false;
-  const hasRejected = currentModelName ? sideBarManager.rejectedModels.has(currentModelName) : false;
+  const hasApproved = currentModelName
+    ? sideBarManager.approvedModels.has(currentModelName)
+    : false;
+  const hasRejected = currentModelName
+    ? sideBarManager.rejectedModels.has(currentModelName)
+    : false;
 
   // Helper to extract the current state data
   const getPayload = (status: string, feedback: string = "") => {
@@ -91,21 +97,22 @@ export const FeedbackButtons = observer(() => {
   };
 
   return (
-    <div className="relative flex flex-row gap-2 justify-center items-center w-full">
+    <div className="relative flex flex-row gap-2 justify-center items-center w-full pb-2">
       <div className="flex flex-row gap-2 md:gap-4 justify-center items-center w-full">
         {/* APPROVE BUTTON */}
         <button
           onClick={handleApprove}
           disabled={isCheckingStatus}
           className={`rounded-[20px] px-3 py-1.5 md:px-5 md:py-2 flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm font-semibold shadow-md transition-all duration-300 ${
-            hasApproved 
-              ? "bg-[#2e7d32] shadow-inner scale-[1.02]" 
-              : hasRejected 
-                ? "bg-gray-400 opacity-80 hover:bg-[#43a047] hover:opacity-100" 
-                : "bg-[#4caf50] hover:bg-[#43a047]" 
+            hasApproved
+              ? "bg-[#2e7d32] shadow-inner scale-[1.02]"
+              : hasRejected
+                ? "bg-gray-400 opacity-80 hover:bg-[#43a047] hover:opacity-100"
+                : "bg-[#4caf50] hover:bg-[#43a047]"
           } disabled:opacity-50`}
         >
-          <span className="text-sm md:text-lg leading-none mt-[-2px]">✓</span> {hasApproved ? "APPROVED" : "APPROVE"}
+          <span className="text-sm md:text-lg leading-none mt-[-2px]">✓</span>{" "}
+          {hasApproved ? "APPROVED" : "APPROVE"}
         </button>
 
         {/* REJECT BUTTON */}
@@ -113,14 +120,15 @@ export const FeedbackButtons = observer(() => {
           onClick={handleReject}
           disabled={isCheckingStatus}
           className={`rounded-[20px] px-3 py-1.5 md:px-5 md:py-2 flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm font-semibold shadow-md transition-all duration-300 ${
-            hasRejected 
-              ? "bg-[#c62828] shadow-inner scale-[1.02]" 
-              : hasApproved 
-                ? "bg-gray-400 opacity-80 hover:bg-[#e53935] hover:opacity-100" 
-                : "bg-[#ef5350] hover:bg-[#e53935]" 
+            hasRejected
+              ? "bg-[#c62828] shadow-inner scale-[1.02]"
+              : hasApproved
+                ? "bg-gray-400 opacity-80 hover:bg-[#e53935] hover:opacity-100"
+                : "bg-[#ef5350] hover:bg-[#e53935]"
           } disabled:opacity-50`}
         >
-          <span className="text-sm md:text-lg leading-none mt-[-2px]">✕</span> {hasRejected ? "REJECTED" : "REJECT"}
+          <span className="text-sm md:text-lg leading-none mt-[-2px]">✕</span>{" "}
+          {hasRejected ? "REJECTED" : "REJECT"}
         </button>
 
         {/* FEEDBACK BUTTON */}
@@ -129,7 +137,8 @@ export const FeedbackButtons = observer(() => {
           disabled={isSubmitting}
           className="rounded-[20px] px-3 py-1.5 md:px-5 md:py-2 flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm font-semibold shadow-lg bg-gray-500 hover:bg-gray-600 transition-colors disabled:opacity-50"
         >
-          <span className="text-sm md:text-lg leading-none mt-[-2px]">💬</span> FEEDBACK
+          <span className="text-sm md:text-lg leading-none mt-[-2px]">💬</span>{" "}
+          FEEDBACK
         </button>
       </div>
 

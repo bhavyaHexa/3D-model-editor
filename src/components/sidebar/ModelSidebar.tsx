@@ -35,7 +35,7 @@ export const ModelSidebar = observer(() => {
 
   return (
     <aside
-      className="w-64 bg-gray-100 border-r border-gray-300 flex-col p-4 hidden md:flex"
+      className="w-64 bg-gray-100 border-r border-gray-300 flex-col gap-4 p-4 hidden md:flex"
       onClick={() => {
         if (isDropdownOpen) closeDropdown();
         if (isMaterialDropdownOpen) closeMaterialDropdown();
@@ -43,13 +43,13 @@ export const ModelSidebar = observer(() => {
         if (stateManager.designManager.sideBarManager.isCategoryDropdownOpen) stateManager.designManager.sideBarManager.closeCategoryDropdown();
       }}
     >
-      <h2 className="text-gray-800 font-semibold text-sm mb-3">
+      <h2 className="text-gray-800 font-semibold text-sm">
         Model Explorer
       </h2>
 
       <CategoryDropdown />
 
-      <div className="mb-4 relative" onClick={(e) => e.stopPropagation()}>
+      <div className="relative" onClick={(e) => e.stopPropagation()}>
         <label className="block text-xs font-medium text-gray-700 mb-1">
           Select Model
         </label>

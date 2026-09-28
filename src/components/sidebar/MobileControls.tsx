@@ -93,7 +93,7 @@ export const MobileControls = observer(() => {
 
         <MaterialDropdown />
         {hasCrimpMesh && <CrimpDropdown />}
-        <div className="mt-2 pb-4">
+        <div className="mt-2 pb-8">
           <FeedbackButtons />
         </div>
       </div>
