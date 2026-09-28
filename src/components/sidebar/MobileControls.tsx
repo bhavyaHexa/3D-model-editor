@@ -11,7 +11,7 @@ export const MobileControls = observer(() => {
   const { sideBarManager } = stateManager.designManager;
   const { modelLoadManager } = stateManager.design3DManager;
 
-  const hasCrimpMesh = modelLoadManager.meshes.some(mesh => mesh.name === "Crimp");
+  const hasCrimpMesh = modelLoadManager.meshes.some(mesh => mesh.name === "Crimp") && sideBarManager.selectedCategory !== "PROBlack DR Fittings";
 
   const {
     filteredModelFiles,
