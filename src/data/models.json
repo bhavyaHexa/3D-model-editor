@@ -82,7 +82,8 @@
         "name": "Blue",
         "materialMap": {
           "Nut": "Blue",
-          "Crimp": "Blue"
+          "Crimp": "Blue",
+          "Pipe": "Blue"
         }
       },
       {
@@ -90,7 +91,8 @@
         "name": "Black",
         "materialMap": {
           "Nut": "Black",
-          "Crimp": "Black"
+          "Crimp": "Black",
+          "Pipe": "Black"
         }
       },
       {
@@ -98,7 +100,8 @@
         "name": "Stainless Steel",
         "materialMap": {
           "Nut": "Stainless Steel",
-          "Crimp": "Stainless Steel"
+          "Crimp": "Stainless Steel",
+          "Pipe": "Stainless Steel"
         }
       }
     ],
@@ -521,7 +524,7 @@
   },
   {
     "id": "AC-12-M3-90-M22",
-    "name": "AC-12-M3-90-M22",
+    "name": "AC-12-MX-90-M22",
     "url": "/models/ClientModel/AC-12-M3-90-M22.glb",
     "colorCombination": [
       {
@@ -694,7 +697,7 @@
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Collar": "Gold",
+          "PressLock": "Gold",
           "Pipe": "Blue"
         }
       }
@@ -712,7 +715,7 @@
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Collar": "Gold",
+          "PressLock": "Gold",
           "Pipe": "Blue"
         }
       }
@@ -730,7 +733,7 @@
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Collar": "Gold",
+          "PressLock": "Gold",
           "Pipe": "Blue"
         }
       }
@@ -748,7 +751,7 @@
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Collar": "Gold",
+          "PressLock": "Gold",
           "Pipe": "Blue"
         }
       }
@@ -766,7 +769,7 @@
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Collar": "Gold",
+          "PressLock": "Gold",
           "Pipe": "Blue"
         }
       }
@@ -784,7 +787,7 @@
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
-          "Collar": "Gold",
+          "PressLock": "Gold",
           "Pipe": "Blue"
         }
       }
