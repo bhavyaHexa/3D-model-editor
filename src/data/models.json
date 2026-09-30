@@ -634,7 +634,7 @@
   },
   {
     "id": "AR-08-G3",
-    "name": "AR-08-GX",
+    "name": "AR-08-G3",
     "url": "/models/ClientModel/AR-08-G3.glb",
     "colorCombination": [
       {
@@ -652,7 +652,7 @@
   },
   {
     "id": "AR-08-P3-DS",
-    "name": "AR-08-PX-DS",
+    "name": "AR-08-P3-DS",
     "url": "/models/ClientModel/AR-08-P3-DS.glb",
     "colorCombination": [
       {
@@ -688,7 +688,7 @@
   },
   {
     "id": "PL-24-30JIC-3",
-    "name": "PL-24-30JIC-X",
+    "name": "PL-24-30JIC-3",
     "url": "/models/ClientModel/PL-24-30JIC-3.glb",
     "colorCombination": [
       {
@@ -724,7 +724,7 @@
   },
   {
     "id": "PL-24-G3-DS",
-    "name": "PL-24-GX-DS",
+    "name": "PL-24-G3-DS",
     "url": "/models/ClientModel/PL-24-G3-DS.glb",
     "colorCombination": [
       {
