@@ -36,7 +36,7 @@
       },
       {
         "id": 4,
-        "name": "Aluminum Banjow/Stainless Steel Bolt",
+        "name": "Aluminum Banjo w/Stainless Steel Bolt ",
         "materialMap": {
           "Nut": "Stainless Steel",
           "Crimp": "Blue",
@@ -229,7 +229,7 @@
       },
       {
         "id": 4,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "name": "Stainless Steel w/t Aluminum Blue Nut",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
@@ -239,7 +239,7 @@
       },
       {
         "id": 5,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "name": "Stainless Steel w/t Aluminum Black Nut",
         "materialMap": {
           "Nut": "Black",
           "NutHead": "Black",
@@ -262,7 +262,8 @@
           "Nut": "Blue",
           "NutHead": "Blue",
           "Crimp": "Blue",
-          "Pipe": "Blue"
+          "Pipe": "Blue",
+          "Insert": "Blue"
         }
       },
       {
@@ -272,7 +273,8 @@
           "Nut": "Black",
           "NutHead": "Black",
           "Crimp": "Black",
-          "Pipe": "Black"
+          "Pipe": "Black",
+          "Insert": "Black"
         }
       },
       {
@@ -282,27 +284,30 @@
           "Nut": "Stainless Steel",
           "NutHead": "Stainless Steel",
           "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
+          "Pipe": "Stainless Steel",
+          "Insert": "Stainless Steel"
         }
       },
       {
         "id": 4,
-        "name": "Stainless Elbow w/Aluminum Nut & Insert",
+        "name": "Stainless Steel Elbow w/Aluminum Nut & Insert (Blue)",
         "materialMap": {
           "Nut": "Blue",
           "NutHead": "Blue",
           "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
+          "Pipe": "Stainless Steel",
+          "Insert": "Blue"
         }
       },
       {
         "id": 5,
-        "name": "Stainless Elbow w/Aluminum Nut & Insert",
+        "name": "Stainless Steel Elbow w/Aluminum Nut & Insert (Black)",
         "materialMap": {
           "Nut": "Black",
           "NutHead": "Black",
           "Crimp": "Stainless Steel",
-          "Pipe": "Stainless Steel"
+          "Pipe": "Stainless Steel",
+          "Insert": "Black"
         }
       }
     ],
@@ -1348,18 +1353,18 @@
       },
       {
         "id": 2,
-        "name": "Stainless Steel w/t Aluminium Black Nut",
+        "name": "Stainless Steel w/Aluminum Black Nut",
         "materialMap": {
-          "Pipe": "Black",
+          "Pipe": "Stainless Steel",
           "Nut": "Black",
           "Crimp": "Stainless Steel"
         }
       },
       {
         "id": 3,
-        "name": "Stainless Steel w/t Aluminium Blue Nut",
+        "name": "Stainless Steel w/Aluminum Blue Nut",
         "materialMap": {
-          "Pipe": "Blue",
+          "Pipe": "Stainless Steel",
           "Nut": "Blue",
           "Crimp": "Stainless Steel"
         }
