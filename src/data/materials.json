@@ -11,7 +11,7 @@
       "id": "black",
       "name": "Black",
       "materialURL": "/materials/Black.glb",
-      "colorCode": "#000000"
+      "colorCode": "#444444"
     },
     {
       "id": "stainless",
