@@ -11,7 +11,7 @@ interface SubMeshProps {
   selectedMaterial: any;
   selectedCrimpColor: any;
   isSelected: boolean;
-  defaultMaterial: THREE.Material;
+  baseMaterial: THREE.Material | null;
 }
 
 const SubMeshMaterialLoader = memo(
@@ -20,7 +20,7 @@ const SubMeshMaterialLoader = memo(
     selectedMaterial,
     selectedCrimpColor,
     isSelected,
-    defaultMaterial,
+    baseMaterial,
   }: SubMeshProps) => {
     const isCrimpMesh = node.name === "Crimp";
 
@@ -30,22 +30,9 @@ const SubMeshMaterialLoader = memo(
 
     const matItem = mappedColorName
       ? materialsData.find(
-          (m) => m.name.toLowerCase() === mappedColorName.toLowerCase()
+          (m) => m.name.toLowerCase() === mappedColorName.toLowerCase(),
         )
       : null;
-
-    const materialUrl = matItem?.materialURL ?? null;
-
-    let gltfMaterials: Record<string, THREE.Material> | undefined;
-    if (materialUrl) {
-      try {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const gltf = useGLTF(materialUrl);
-        gltfMaterials = gltf.materials;
-      } catch {
-        // Silently handle if material GLB is missing
-      }
-    }
 
     const highlightMaterial = useMemo(() => {
       return new THREE.MeshStandardMaterial({
@@ -60,50 +47,36 @@ const SubMeshMaterialLoader = memo(
         return highlightMaterial;
       }
 
+      // 1. Determine the target color for this mesh
+      let targetColorCode: string | null = null;
       if (isCrimpMesh && selectedCrimpColor) {
-        const isStainless = selectedCrimpColor.name.toLowerCase().includes("stainless");
-        const mat = new THREE.MeshPhysicalMaterial({
-          clearcoat: 0.1,
-          clearcoatRoughness: 0.1,
-          color: new THREE.Color(selectedCrimpColor.colorCode),
-          metalness: isStainless ? 0.95 : 0.8,
-          reflectivity: 0.9,
-          roughness: isStainless ? 0.15 : 0.25,
-        });
-        return mat;
+        targetColorCode = selectedCrimpColor.colorCode;
+      } else if (matItem?.colorCode) {
+        targetColorCode = matItem.colorCode;
       }
 
-      if (gltfMaterials) {
-        const materialValues = Object.values(gltfMaterials);
-        if (materialValues.length > 0) {
-          const mat = materialValues[0].clone();
-          mat.needsUpdate = true;
-          return mat;
+      // 2. If we have our universal base material, clone it and override the color
+      if (baseMaterial) {
+        const clonedMat = baseMaterial.clone() as THREE.MeshStandardMaterial | THREE.MeshPhysicalMaterial;
+        
+        if (targetColorCode) {
+          clonedMat.color = new THREE.Color(targetColorCode);
         }
+        
+        clonedMat.needsUpdate = true;
+        return clonedMat;
       }
 
-      // Fallback to generating a material dynamically if there is a colorCode but no GLB
-      if (matItem?.colorCode) {
-        const isStainless = matItem.name.toLowerCase().includes("stainless");
-        return new THREE.MeshPhysicalMaterial({
-          clearcoat: 0.1,
-          clearcoatRoughness: 0.1,
-          color: new THREE.Color(matItem.colorCode),
-          metalness: isStainless ? 0.95 : 0.8,
-          reflectivity: 0.9,
-          roughness: isStainless ? 0.15 : 0.25,
-        });
-      }
-
-      // 4. Default Base Material Check
-      return node.material || defaultMaterial;
+      // 3. Fallback to the original GLTF material if baseMaterial isn't loaded
+      return node.material;
     }, [
+      isSelected,
+      highlightMaterial,
       isCrimpMesh,
       selectedCrimpColor,
-      gltfMaterials,
       matItem,
+      baseMaterial,
       node.material,
-      defaultMaterial,
     ]);
 
     // Handle selection outline declaratively
@@ -136,7 +109,7 @@ const SubMeshMaterialLoader = memo(
         )}
       </mesh>
     );
-  }
+  },
 );
 
 export function LoadedModel({
@@ -147,19 +120,21 @@ export function LoadedModel({
   selectedMaterial,
   selectedCrimpColor,
 }: LoadedModelProps) {
+  // Load the main model
   const { scene, nodes } = useGLTF(url);
-
-  // Create the default fitting material (Silver default matching BMRS-FE)
-  const fittingMaterial = useMemo(() => {
-    return new THREE.MeshPhysicalMaterial({
-      clearcoat: 0.1,
-      clearcoatRoughness: 0.1,
-      color: new THREE.Color("#C0C0C0"), // Global default colorCode
-      metalness: 0.8,
-      reflectivity: 0.9,
-      roughness: 0.25,
-    });
-  }, []);
+  
+  // Load the single universal material GLB
+  // Note: Please ensure /models/Rendering/material.glb is placed in the public directory!
+  const materialGltf = useGLTF("/models/Rendering/material.glb");
+  const baseMaterial = useMemo(() => {
+    if (materialGltf && materialGltf.materials) {
+      const matValues = Object.values(materialGltf.materials);
+      if (matValues.length > 0) {
+        return matValues[0];
+      }
+    }
+    return null;
+  }, [materialGltf]);
 
   useEffect(() => {
     if (scene) {
@@ -183,7 +158,7 @@ export function LoadedModel({
               selectedMaterial={selectedMaterial}
               selectedCrimpColor={selectedCrimpColor}
               isSelected={selectedMeshUuid === meshNode.uuid}
-              defaultMaterial={fittingMaterial}
+              baseMaterial={baseMaterial}
             />
           );
         }
@@ -192,3 +167,6 @@ export function LoadedModel({
     </group>
   );
 }
+
+// Preload the universal material
+useGLTF.preload("/models/Rendering/material.glb");

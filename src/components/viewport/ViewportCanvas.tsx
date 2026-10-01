@@ -22,7 +22,13 @@ export const ViewportCanvas = observer(() => {
   const onModelLoaded = modelLoadManager.handleModelLoaded;
 
   return (
-    <div className="flex-1 h-full bg-blueprint-grid relative">
+    <div
+      className="flex-1 h-full relative"
+      style={{
+        background:
+          "linear-gradient(to bottom, #a8a9ad 0%, #bfc0c3 50%, #6d6e6f 100%)",
+      }}
+    >
       <div className="hidden md:block absolute z-50 w-max bottom-12 left-1/2 -translate-x-1/2">
         <FeedbackButtons />
       </div>
