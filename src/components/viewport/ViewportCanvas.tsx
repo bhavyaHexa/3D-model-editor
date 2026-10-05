@@ -7,7 +7,6 @@ import { LoadedModel } from "./LoadedModel";
 import { Loader } from "./Loader";
 import { Env } from "./Env";
 import { useMainContext } from "../../context/MainContext";
-import { FeedbackButtons } from "./FeedbackButtons";
 import { NormalizedModelGroup } from "./NormalizedModelGroup";
 
 export const ViewportCanvas = observer(() => {
@@ -28,9 +27,6 @@ export const ViewportCanvas = observer(() => {
         background: "radial-gradient(circle at center, #eaecf0 0%, #8c96a3 100%)",
       }}
     >
-      <div className="hidden md:block absolute z-50 w-max bottom-12 left-1/2 -translate-x-1/2">
-        <FeedbackButtons />
-      </div>
       {sideBarManager.selectedModel?.name && (
         <div className="absolute bottom-6 md:top-6 md:bottom-auto left-1/2 -translate-x-1/2 z-10 pointer-events-none">
           <h2 className="text-gray-800 font-bold text-xl md:text-2xl tracking-wide">
