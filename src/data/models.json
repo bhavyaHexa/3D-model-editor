@@ -692,9 +692,124 @@
     "category": "PROGold Fittings"
   },
   {
-    "id": "PL-24-30JIC-3",
-    "name": "PL-24-30JIC-3",
-    "url": "/models/ClientModel/PL-24-30JIC-3.glb",
+    "id": "PL-24-0004-00",
+    "name": "PL-24-0004-00",
+    "url": "/models/PL - Fittings/PL-24-0004-00.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-0008",
+    "name": "PL-24-0008",
+    "url": "/models/PL - Fittings/PL-24-0008.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "KeepPlate": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-0010-00",
+    "name": "PL-24-0010-00",
+    "url": "/models/PL - Fittings/PL-24-0010-00.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "KeepPlate": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-0011",
+    "name": "PL-24-0011",
+    "url": "/models/PL - Fittings/PL-24-0011.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "KeepPlate": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-20-30-WFFD-DS",
+    "name": "PL-24-20-30-WFFD-DS",
+    "url": "/models/PL - Fittings/PL-24-20-30-WFFD-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-20-60-WFFD-DS",
+    "name": "PL-24-20-60-WFFD-DS",
+    "url": "/models/PL - Fittings/PL-24-20-60-WFFD-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-20-90WFDS",
+    "name": "PL-24-20-90WFDS",
+    "url": "/models/PL - Fittings/PL-24-20-90WFDS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-20-F3",
+    "name": "PL-24-20-F3",
+    "url": "/models/PL - Fittings/PL-24-20-F3.glb",
     "colorCombination": [
       {
         "id": 1,
@@ -710,9 +825,125 @@
     "category": "PROGold Fittings"
   },
   {
+    "id": "PL-24-30-WF",
+    "name": "PL-24-30-WF",
+    "url": "/models/PL - Fittings/PL-24-30-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-30JIC-3",
+    "name": "PL-24-30JIC-3",
+    "url": "/models/PL - Fittings/PL-24-30JIC-3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-45-WF",
+    "name": "PL-24-45-WF",
+    "url": "/models/PL - Fittings/PL-24-45-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-45-WFFD",
+    "name": "PL-24-45-WFFD",
+    "url": "/models/PL - Fittings/PL-24-45-WFFD.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
     "id": "PL-24-60-WF",
     "name": "PL-24-60-WF",
-    "url": "/models/ClientModel/PL-24-60-WF.glb",
+    "url": "/models/PL - Fittings/PL-24-60-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-60JIC-3",
+    "name": "PL-24-60JIC-3",
+    "url": "/models/PL - Fittings/PL-24-60JIC-3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-90-WF",
+    "name": "PL-24-90-WF",
+    "url": "/models/PL - Fittings/PL-24-90-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-F3",
+    "name": "PL-24-F3",
+    "url": "/models/PL - Fittings/PL-24-F3.glb",
     "colorCombination": [
       {
         "id": 1,
@@ -730,7 +961,61 @@
   {
     "id": "PL-24-G3-DS",
     "name": "PL-24-G3-DS",
-    "url": "/models/ClientModel/PL-24-G3-DS.glb",
+    "url": "/models/PL - Fittings/PL-24-G3-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-G3",
+    "name": "PL-24-G3",
+    "url": "/models/PL - Fittings/PL-24-G3.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-H3-DS",
+    "name": "PL-24-H3-DS",
+    "url": "/models/PL - Fittings/PL-24-H3-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-H3",
+    "name": "PL-24-H3",
+    "url": "/models/PL - Fittings/PL-24-H3.glb",
     "colorCombination": [
       {
         "id": 1,
@@ -748,7 +1033,55 @@
   {
     "id": "PL-24-ST-WF",
     "name": "PL-24-ST-WF",
-    "url": "/models/ClientModel/PL-24-ST-WF.glb",
+    "url": "/models/PL - Fittings/PL-24-ST-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-ST-WFFD",
+    "name": "PL-24-ST-WFFD",
+    "url": "/models/PL - Fittings/PL-24-ST-WFFD.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-24-ST-WM",
+    "name": "PL-24-ST-WM",
+    "url": "/models/PL - Fittings/PL-24-ST-WM.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-28-0005-00",
+    "name": "PL-28-0005-00",
+    "url": "/models/PL - Fittings/PL-28-0005-00.glb",
     "colorCombination": [
       {
         "id": 1,
@@ -765,8 +1098,42 @@
   },
   {
     "id": "PL-28-0006-60",
-    "name": "PL-28-0005-60",
-    "url": "/models/ClientModel/PL-28-0006-60.glb",
+    "name": "PL-28-0006-60",
+    "url": "/models/PL - Fittings/PL-28-0006-60.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-28-24-45-WFFD-DS",
+    "name": "PL-28-24-45-WFFD-DS",
+    "url": "/models/PL - Fittings/PL-28-24-45-WFFD-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-28-32-0005-00",
+    "name": "PL-28-32-0005-00",
+    "url": "/models/PL - Fittings/PL-28-32-0005-00.glb",
     "colorCombination": [
       {
         "id": 1,
@@ -784,7 +1151,58 @@
   {
     "id": "PL-28-ST-WFFD",
     "name": "PL-28-ST-WFFD",
-    "url": "/models/ClientModel/PL-28-ST-WFFD.glb",
+    "url": "/models/PL - Fittings/PL-28-ST-WFFD.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-0004",
+    "name": "PL-32-0004",
+    "url": "/models/PL - Fittings/PL-32-0004.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "KeepPlate": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-0005-00",
+    "name": "PL-32-0005-00",
+    "url": "/models/PL - Fittings/PL-32-0005-00.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-0005-60",
+    "name": "PL-32-0005-60",
+    "url": "/models/PL - Fittings/PL-32-0005-60.glb",
     "colorCombination": [
       {
         "id": 1,
@@ -802,15 +1220,164 @@
   {
     "id": "PL-32-0009",
     "name": "PL-32-0009",
-    "url": "/models/ClientModel/PL-32-0009.glb",
+    "url": "/models/PL - Fittings/PL-32-0009.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "KeepPlate": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-20-ST-WFFD",
+    "name": "PL-32-20-ST-WFFD",
+    "url": "/models/PL - Fittings/PL-32-20-ST-WFFD.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-24-45-WFFD-DS",
+    "name": "PL-32-24-45-WFFD-DS",
+    "url": "/models/PL - Fittings/PL-32-24-45-WFFD-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-24-F3",
+    "name": "PL-32-24-F3",
+    "url": "/models/PL - Fittings/PL-32-24-F3.glb",
     "colorCombination": [
       {
         "id": 1,
         "name": "Aluminum (Blue / Gold)",
         "materialMap": {
           "Nut": "Blue",
-          "KeepPlate": "Blue",
-          "Collar": "Gold",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-24-G3-DS",
+    "name": "PL-32-24-G3-DS",
+    "url": "/models/PL - Fittings/PL-32-24-G3-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-24-H3-DS",
+    "name": "PL-32-24-H3-DS",
+    "url": "/models/PL - Fittings/PL-32-24-H3-DS.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "Nut": "Blue",
+          "NutHead": "Blue",
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-28-ST-WFFD",
+    "name": "PL-32-28-ST-WFFD",
+    "url": "/models/PL - Fittings/PL-32-28-ST-WFFD.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-ST-WF",
+    "name": "PL-32-ST-WF",
+    "url": "/models/PL - Fittings/PL-32-ST-WF.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "PL-32-ST-WM",
+    "name": "PL-32-ST-WM",
+    "url": "/models/PL - Fittings/PL-32-ST-WM.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
+          "Pipe": "Blue"
+        }
+      }
+    ],
+    "category": "PROGold Fittings"
+  },
+  {
+    "id": "TF-24-PL-7",
+    "name": "TF-24-PL-7",
+    "url": "/models/PL - Fittings/TF-24-PL-7.glb",
+    "colorCombination": [
+      {
+        "id": 1,
+        "name": "Aluminum (Blue / Gold)",
+        "materialMap": {
+          "PressLock": "Gold",
           "Pipe": "Blue"
         }
       }
