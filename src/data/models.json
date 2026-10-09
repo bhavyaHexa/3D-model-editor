@@ -1369,22 +1369,6 @@
     "category": "PROGold Fittings"
   },
   {
-    "id": "TF-24-PL-7",
-    "name": "TF-24-PL-7",
-    "url": "/models/PL - Fittings/TF-24-PL-7.glb",
-    "colorCombination": [
-      {
-        "id": 1,
-        "name": "Aluminum (Blue / Gold)",
-        "materialMap": {
-          "PressLock": "Gold",
-          "Pipe": "Blue"
-        }
-      }
-    ],
-    "category": "PROGold Fittings"
-  },
-  {
     "id": "DR-08-M4-120",
     "name": "DR-08-M4-120",
     "url": "/models/SB&PROBlack Models/DR-08-M4-120.glb",
